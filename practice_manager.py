@@ -12,6 +12,9 @@ from typing import Any
 DEFAULT_DATA_PATH = Path('practice_questions.json')
 ANSWER_LABELS = ['A', 'B', 'C', 'D']
 STOP_WORDS = {'q', 'quit', 'exit', 'back'}
+REMEMBER_STREAK_THRESHOLD = 3
+NORMAL_WEIGHT = 5
+REMEMBERED_WEIGHT = 1
 
 
 def load_questions(data_path: Path) -> list[dict[str, Any]]:
@@ -19,6 +22,8 @@ def load_questions(data_path: Path) -> list[dict[str, Any]]:
     for question in questions:
         question.setdefault('answer', '')
         question['wrong_count'] = int(question.get('wrong_count', 0) or 0)
+        question['correct_streak'] = int(question.get('correct_streak', 0) or 0)
+        question['remembered'] = bool(question.get('remembered', False))
     return questions
 
 
@@ -73,8 +78,12 @@ def render_question(question: dict[str, Any], show_answer: bool = False) -> str:
     if show_answer:
         answer = question.get('answer', '')
         wrong_count = question.get('wrong_count', 0)
+        correct_streak = question.get('correct_streak', 0)
+        remembered = '是' if question.get('remembered') else '否'
         lines.append(f"答案: {answer if answer else '未录入'}")
         lines.append(f"错题次数: {wrong_count}")
+        lines.append(f"连续答对: {correct_streak}")
+        lines.append(f"已记住: {remembered}")
     return '\n'.join(lines)
 
 
@@ -118,6 +127,27 @@ def answers_match(question: dict[str, Any], stored_answer: str, user_answer: str
         return normalized_stored.upper() == normalized_user.upper()
 
     return normalize_text(normalized_stored) == normalize_text(normalized_user)
+
+
+def update_mastery_state(question: dict[str, Any], is_correct: bool) -> None:
+    if is_correct:
+        question['correct_streak'] = int(question.get('correct_streak', 0)) + 1
+        if question['correct_streak'] >= REMEMBER_STREAK_THRESHOLD:
+            question['remembered'] = True
+    else:
+        question['correct_streak'] = 0
+        question['remembered'] = False
+
+
+def question_weight(question: dict[str, Any]) -> int:
+    return REMEMBERED_WEIGHT if question.get('remembered') else NORMAL_WEIGHT
+
+
+def choose_weighted_question(questions: list[dict[str, Any]]) -> dict[str, Any] | None:
+    if not questions:
+        return None
+    weights = [question_weight(question) for question in questions]
+    return random.choices(questions, weights=weights, k=1)[0]
 
 
 def prompt(text: str) -> str:
@@ -195,15 +225,10 @@ def self_test_mode(questions: list[dict[str, Any]], data_path: Path) -> None:
         print('当前没有已录入答案的题目，先进入填正确答案模式。')
         return
 
-    random.shuffle(candidates)
-    index = 0
     while True:
-        if index >= len(candidates):
-            random.shuffle(candidates)
-            index = 0
-
-        question = candidates[index]
-        index += 1
+        question = choose_weighted_question(candidates)
+        if question is None:
+            return
 
         clear_screen()
         print(render_question(question, show_answer=False))
@@ -219,15 +244,18 @@ def self_test_mode(questions: list[dict[str, Any]], data_path: Path) -> None:
 
         if not is_correct:
             question['wrong_count'] = int(question.get('wrong_count', 0)) + 1
-            save_questions(data_path, questions)
+        update_mastery_state(question, is_correct)
+        save_questions(data_path, questions)
 
         clear_screen()
         print(render_question(question, show_answer=True))
         print(f'你的答案: {resolved_answer}')
         print(f'正确答案: {correct_answer}')
         print('结果: 正确' if is_correct else '结果: 错误')
+        if question.get('remembered'):
+            print('状态: 已记住，后续出现频率已降低')
         print('按回车继续，或输入 q 退出。')
-        if prompt('') .lower() in STOP_WORDS:
+        if prompt('').lower() in STOP_WORDS:
             return
 
 
