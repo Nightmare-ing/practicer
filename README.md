@@ -46,6 +46,12 @@ Run the interactive manager from the project root:
 python3 practice_manager.py
 ```
 
+By default, it reads `practice_questions.json`. If you want to use a different JSON question set, pass it with `--data`:
+
+```bash
+python3 practice_manager.py --data "practice_questions_backup.json"
+```
+
 You can also pass a mode explicitly:
 
 ```bash
