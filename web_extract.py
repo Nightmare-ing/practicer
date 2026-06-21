@@ -12,6 +12,7 @@ QUESTION_BLOCK_CLASS = re.compile(r'\bmarBom60\b.*\bquestionLi\b.*\bscroll_\d+\b
 QUESTION_NUMBER_RE = re.compile(r'^(\d+)\.\s*')
 QUESTION_TYPE_RE = re.compile(r'^[（(]([^）)]+)[）)]')
 OPTION_RE = re.compile(r'^([ABCD])[\.．、:]?\s*(.*)$')
+ANSWER_RE = re.compile(r'^[ABCD](?:\s*[，,、/\\]\s*[ABCD])*$', re.IGNORECASE)
 
 
 def normalize_whitespace(text: str) -> str:
@@ -49,6 +50,15 @@ def clean_option_text(text: str) -> tuple[str | None, str]:
 	return label, option_text
 
 
+def clean_answer_text(text: str) -> str:
+	text = normalize_whitespace(unescape(text))
+	text = text.replace('正确答案:', '').replace('我的答案:', '').strip()
+	text = text.rstrip('。；;')
+	if ANSWER_RE.match(text):
+		return text.upper().replace(' ', '')
+	return text
+
+
 class PracticeHTMLParser(HTMLParser):
 	def __init__(self) -> None:
 		super().__init__(convert_charrefs=True)
@@ -57,8 +67,10 @@ class PracticeHTMLParser(HTMLParser):
 		self._in_question = False
 		self._in_title = False
 		self._in_option = False
+		self._in_answer = False
 		self._current_title_parts: list[str] = []
 		self._current_option_parts: list[str] = []
+		self._current_answer_parts: list[str] = []
 		self._current_question: dict[str, object] | None = None
 
 	def handle_starttag(self, tag: str, attrs):
@@ -75,6 +87,7 @@ class PracticeHTMLParser(HTMLParser):
 					'type': None,
 					'stem': '',
 					'options': {},
+					'answer': '',
 				}
 				return
 
@@ -97,11 +110,20 @@ class PracticeHTMLParser(HTMLParser):
 			self._current_option_parts = []
 			return
 
+		if tag == 'span':
+			class_name = attrs_dict.get('class', '')
+			if 'rightAnswerContent' in class_name:
+				self._in_answer = True
+				self._current_answer_parts = []
+			return
+
 		if tag == 'br':
 			if self._in_title:
 				self._current_title_parts.append(' ')
 			elif self._in_option:
 				self._current_option_parts.append(' ')
+			elif self._in_answer:
+				self._current_answer_parts.append(' ')
 
 	def handle_endtag(self, tag: str):
 		if not self._in_question:
@@ -131,6 +153,15 @@ class PracticeHTMLParser(HTMLParser):
 			self._current_option_parts = []
 			return
 
+		if tag == 'span' and self._in_answer:
+			raw_answer = ''.join(self._current_answer_parts)
+			answer = clean_answer_text(raw_answer)
+			if self._current_question is not None:
+				self._current_question['answer'] = answer
+			self._in_answer = False
+			self._current_answer_parts = []
+			return
+
 		if tag == 'div' and self._in_question:
 			self._div_depth -= 1
 			if self._div_depth <= 0:
@@ -148,12 +179,16 @@ class PracticeHTMLParser(HTMLParser):
 				self._current_question = None
 				self._current_title_parts = []
 				self._current_option_parts = []
+				self._current_answer_parts = []
+				self._in_answer = False
 
 	def handle_data(self, data: str):
 		if self._in_title:
 			self._current_title_parts.append(data)
 		elif self._in_option:
 			self._current_option_parts.append(data)
+		elif self._in_answer:
+			self._current_answer_parts.append(data)
 
 
 def extract_questions(html_path: Path) -> list[dict[str, object]]:
