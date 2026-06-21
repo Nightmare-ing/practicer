@@ -150,6 +150,38 @@ def choose_weighted_question(questions: list[dict[str, Any]]) -> dict[str, Any] 
     return random.choices(questions, weights=weights, k=1)[0]
 
 
+def grade_question(question: dict[str, Any], questions: list[dict[str, Any]], data_path: Path) -> bool | None:
+    clear_screen()
+    print(render_question(question, show_answer=False))
+    print()
+    user_answer = prompt('你的答案(A/B/C/D，q 退出): ')
+    if user_answer.lower() in STOP_WORDS:
+        return None
+
+    resolved_answer = resolve_answer(question, user_answer)
+    stored_answer = question.get('answer', '')
+    is_correct = answers_match(question, stored_answer, resolved_answer)
+    correct_answer = normalize_answer(question, stored_answer)
+
+    if not is_correct:
+        question['wrong_count'] = int(question.get('wrong_count', 0)) + 1
+    update_mastery_state(question, is_correct)
+    save_questions(data_path, questions)
+
+    clear_screen()
+    print(render_question(question, show_answer=True))
+    print(f'你的答案: {resolved_answer}')
+    print(f'正确答案: {correct_answer}')
+    print('结果: 正确' if is_correct else '结果: 错误')
+    if question.get('remembered'):
+        print('状态: 已记住，后续出现频率已降低')
+    print('按回车继续，或输入 q 退出。')
+    if prompt('').lower() in STOP_WORDS:
+        return None
+
+    return is_correct
+
+
 def prompt(text: str) -> str:
     return input(text).strip()
 
@@ -230,32 +262,47 @@ def self_test_mode(questions: list[dict[str, Any]], data_path: Path) -> None:
         if question is None:
             return
 
-        clear_screen()
-        print(render_question(question, show_answer=False))
-        print()
-        user_answer = prompt('你的答案(A/B/C/D，q 退出): ')
-        if user_answer.lower() in STOP_WORDS:
+        if grade_question(question, questions, data_path) is None:
             return
 
-        resolved_answer = resolve_answer(question, user_answer)
-        stored_answer = question.get('answer', '')
-        is_correct = answers_match(question, stored_answer, resolved_answer)
-        correct_answer = normalize_answer(question, stored_answer)
 
-        if not is_correct:
-            question['wrong_count'] = int(question.get('wrong_count', 0)) + 1
-        update_mastery_state(question, is_correct)
-        save_questions(data_path, questions)
+def final_test_mode(questions: list[dict[str, Any]], data_path: Path) -> None:
+    candidates = [question for question in questions if question.get('answer')]
+    if not candidates:
+        print('当前没有已录入答案的题目，先进入填正确答案模式。')
+        return
 
+    clear_screen()
+    print('最终测试模式：先随机出完所有题，再回顾第一轮做错的题。')
+    print('按回车开始。')
+    if prompt('').lower() in STOP_WORDS:
+        return
+
+    first_round = random.sample(candidates, k=len(candidates))
+    wrong_questions: list[dict[str, Any]] = []
+
+    for question in first_round:
+        result = grade_question(question, questions, data_path)
+        if result is None:
+            return
+        if not result:
+            wrong_questions.append(question)
+
+    if not wrong_questions:
         clear_screen()
-        print(render_question(question, show_answer=True))
-        print(f'你的答案: {resolved_answer}')
-        print(f'正确答案: {correct_answer}')
-        print('结果: 正确' if is_correct else '结果: 错误')
-        if question.get('remembered'):
-            print('状态: 已记住，后续出现频率已降低')
-        print('按回车继续，或输入 q 退出。')
-        if prompt('').lower() in STOP_WORDS:
+        print('第一轮全部答对，没有需要回顾的错题。')
+        return
+
+    clear_screen()
+    print(f'第一轮结束，错题 {len(wrong_questions)} 道，开始第二轮回顾。')
+    print('按回车继续。')
+    if prompt('').lower() in STOP_WORDS:
+        return
+
+    second_round = random.sample(wrong_questions, k=len(wrong_questions))
+    for question in second_round:
+        result = grade_question(question, questions, data_path)
+        if result is None:
             return
 
 
@@ -264,8 +311,8 @@ def main() -> None:
     parser.add_argument('--data', default=str(DEFAULT_DATA_PATH), help='JSON data file path')
     parser.add_argument(
         '--mode',
-        choices=['fill', 'test'],
-        help='fill: search and record answers; test: random self-test',
+        choices=['fill', 'test', 'final'],
+        help='fill: search and record answers; test: random self-test; final: full round then wrong-question review',
     )
     args = parser.parse_args()
 
@@ -278,11 +325,16 @@ def main() -> None:
         print('请选择模式:')
         print('1. fill  录入正确答案')
         print('2. test  自测模式')
-        choice = prompt('输入 1 或 2: ')
+        print('3. final 最终测试模式')
+        choice = prompt('输入 1、2 或 3: ')
         mode = 'fill' if choice == '1' else 'test'
+        if choice == '3':
+            mode = 'final'
 
     if mode == 'fill':
         fill_answer_mode(questions, data_path)
+    elif mode == 'final':
+        final_test_mode(questions, data_path)
     else:
         self_test_mode(questions, data_path)
 

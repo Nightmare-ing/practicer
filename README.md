@@ -51,6 +51,7 @@ You can also pass a mode explicitly:
 ```bash
 python3 practice_manager.py --mode fill
 python3 practice_manager.py --mode test
+python3 practice_manager.py --mode final
 ```
 
 ### Mode 1: Fill Answers
@@ -80,6 +81,16 @@ Behavior:
 - It compares your input against the saved answer.
 - Wrong attempts increment `wrong_count`.
 - Questions that are answered correctly several times in a row are marked as remembered and appear less often later.
+
+### Mode 3: Final Test
+
+Use this mode to run a complete final review.
+
+Behavior:
+
+- Every question with a saved answer is shown once in random order.
+- After the first round finishes, only the questions answered incorrectly in that round are shown again.
+- The review stops after that second pass.
 
 ## Stored Fields
 
