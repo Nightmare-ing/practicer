@@ -198,6 +198,11 @@ def extract_questions(html_path: Path) -> list[dict[str, object]]:
 	return parser.questions
 
 
+def confirm_overwrite(output_path: Path) -> bool:
+	response = input(f'{output_path} 已存在，是否覆盖？[y/N]: ').strip().lower()
+	return response in {'y', 'yes'}
+
+
 def main() -> None:
 	parser = argparse.ArgumentParser(description='Extract structured practice questions from a web HTML export.')
 	parser.add_argument(
@@ -218,6 +223,9 @@ def main() -> None:
 	output_path = Path(args.output)
 
 	questions = extract_questions(html_path)
+	if output_path.exists() and not confirm_overwrite(output_path):
+		print('已取消覆盖，未写入文件。')
+		return
 	output_path.write_text(json.dumps(questions, ensure_ascii=False, indent=2), encoding='utf-8')
 
 	print(f'Extracted {len(questions)} questions to {output_path}')
