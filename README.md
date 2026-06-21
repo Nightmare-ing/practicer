@@ -28,7 +28,15 @@ If you update the HTML export, rebuild the JSON with:
 python3 web_extract.py
 ```
 
-This reads `problems src/practice.html` and writes `practice_questions.json`.
+This reads `problems src/practice.html` by default and writes `practice_questions.json`.
+
+If you want to extract from another HTML export, pass the path explicitly:
+
+```bash
+python3 web_extract.py "problems src/simulated self-test 1.html" -o practice_questions.json
+```
+
+The same command works with other exports, such as `problems src/practice.html`.
 
 ## Practice Manager
 
