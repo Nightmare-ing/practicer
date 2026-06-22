@@ -1,0 +1,2898 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<script>
+    _HOST_ = "//mooc1.chaoxing.com";
+    _CP_ = "/exam-ans";
+    _HOST_CP1_ = "//mooc1.chaoxing.com/exam-ans";
+    // _HOST_CP2_ = _HOST_ + _CP_;
+    _HOST_CP2_ = _CP_;
+</script><head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>考试</title>
+    <link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/pop.css?v=2026-0130-2100"/>
+    <link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/commonStuExam.css?v=2026-0512-1038"/>
+    <link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/q_marking_icon.css"/>
+    <link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/style.css?v=2025-0424-1038" >
+    <link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/exam-viewStudent.css?v=2026-0403-1542"/>
+    <link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/newBuiltStudent.css?v=2025-1110-1746"/>
+	        <link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/notAllowCopy.css"/>
+    			<link rel="stylesheet" type="text/css" href="/exam-ans/spacx/exam/mooc2/css/do/exam-do.css?v=2025-1219-2100"/>
+	<link href="/exam-ans/spacx/new/css/msg-note-tpl.cssx?enc=b502ff777e9194cfb79510a84260cc36" rel="stylesheet" type="text/css"/>
+	    <link href="//mooc1.chaoxing.com/exam-ans/css/questionBank/questionBankUsual.css?v=2019-1120-1400" type="text/css" rel="stylesheet"/></head>
+<script>
+	window["uid"] = '403020109';
+	window["currentTime"] = '1782048486551';
+	window["uploadEnc"] = '135ab66655158f5b7d34644c5aa3c508';
+</script>
+<script type="text/javascript">
+    I18N = {
+        "confirmSub": "确认交卷？",
+        "subFailed": "提交失败",
+        "subSucc": "提交成功",
+        "worksubmitTips1": "您还有未做完的",
+        "worksubmitTips2": "，确认提交吗？",
+        "mixedExamSubmitTips1": "请注意完成线下纸质答题卡填写，是否确认提交？",
+        "notLeaveTip1": "系统检测到你于",
+        "notLeaveTip2": "离开考试，请不要中途离开。",
+        'recording': '录制中',
+        'start2': '开始',
+        'faceInDiv': '请保持光线良好，面对镜头眨眨眼，保证人脸在识别框内',
+        'feedbackEmpty': '问题反馈不能为空',
+        'nocamera': '未检测到您的摄像头，请确认开启摄像头权限',
+        'nocameraTips': '无法访问摄像头。请检查：<br>1. 摄像头权限是否开启（可在系统设置或浏览器顶部网站地址旁边查看）<br>2. 摄像头硬件是否正常<br>3. 其他程序是否占用了摄像头',
+        'dectShareScreen': '检测到您未能开启截屏权限，请重新检测，点击"截屏授权"，在浏览器弹窗中共享"整个屏幕',
+        'feedbackSuccess': '反馈成功',
+        'liveAccount' : '直播账号',
+        'passwordI18N' : '密码',
+        'archivePhoto' : '档案照片',
+        'noArchivePhoto' : '暂无档案照片',
+		'forceSubmitTip':'考试已被提交',
+        'forceSubmitStyle1Tip':'你已被老师收卷',
+        'allowAnswerBackTips':'本场考试教师已设置不允许查看上一题，当前题目未作答，确认继续作答下一题？',
+		"faceRcognitionFailTip": "人脸照片采集失败，请重试",
+        "serviceExceptionTip": "服务异常，请重新开始",
+        "faceRcognitionCompareSucceTip": "对比相似度成功，正在进入考试...",
+        "faceRcognitionCompareFailTip": "对比相似度失败",
+        "faceRcognitionLiveStatusFailTip": "人脸活体识别未通过，匹配异常",
+        "electronFaceRcognitionCompareSucceTip": "对比相似度成功，请进行下一步",
+        "reIdentify": "重新识别",
+        "saveTheAnswer": '请保存答案',
+        "mac_microphonePermissionTip": '考试客户端系统权限未完全配置，麦克风功能可能受限，无法正常进入考试。请打开【系统设置】，进入【隐私与安全性】，允许“考试客户端”应用程序访问你的麦克风。若权限打开后未检测正常，可能需要退出重启客户端。',
+        "mac_screenPermissionTip": '考试客户端系统权限未完全配置，屏幕录制功能可能受限，无法正常进入考试。请打开【系统设置】，进入【隐私与安全性】，允许“考试客户端”应用程序访问你的屏幕录制。若权限打开后未检测正常，可能需要退出重启客户端。',
+        "mac_cameraPermissionTip": '考试客户端系统权限未完全配置，摄像头功能可能受限，无法正常进入考试。请打开【系统设置】，进入【隐私与安全性】，允许“考试客户端”应用程序访问你的摄像头。若权限打开后未检测正常，可能需要退出重启客户端。',
+        "win_microphonePermissionTip": '考试客户端系统权限未完全配置，麦克风功能可能受限，无法正常进入考试。请点击【开始】进入【设置】，进入【隐私和安全性】，允许“考试客户端”应用访问你的麦克风。',
+        "win_screenPermissionTip": '考试客户端系统权限未完全配置，屏幕录制功能可能受限，无法正常进入考试。请点击【开始】进入【设置】，进入【隐私和安全性】，允许“考试客户端”应用访问你的屏幕录制。',
+        "win_cameraPermissionTip": '考试客户端系统权限未完全配置，摄像头功能可能受限，无法正常进入考试。请点击【开始】进入【设置】，进入【隐私和安全性】，允许“考试客户端”应用访问你的摄像头。',
+        "enterCode": '请输入程序代码！',
+        "selectProgramLang": '请选择程序语言',
+		 "exitCountExamLockTipPrefix":"系统检测到你离开考试",
+    	 "exitCountExamLockTipSuffix":"次，已锁定考试",
+    	 "exitDurationExamLockTipPrefix":"系统检测到你的切屏时长超过",
+    	 "exitDurationExamLockTipSuffix":"秒，已锁定考试",
+		 "screenshotNumberLockTipPrefix":"系统检测到你截屏次数达到",
+    	 "screenshotOccupancyNumberLockTipPrefix":"系统检测到你屏幕权限被占用次数达到",
+    	 "screenshotLockTipSuffix":"次，已锁定考试",
+        "terminalUaLock":"考试过程中，作答设备发生变更",
+        "terminalIpLock":"考试过程中，IP地址发生变更",
+        "terminalUaAppealTip":"系统检测到你的作答设备发生变更，当前设备已锁定。请使用原设备作答或联系监考教师。",
+        "terminalIpAppealTip":"系统检测到你的IP地址发生变更，当前考试设备已锁定。请联系监考老师或者切换原网络作答。",
+        "terminalUaCodeTip":"请将设备交给监考老师，由监考教师输入监考口令后，可使用当前设备继续考试。",
+        "terminalIpCodeTip":"请将设备交给监考老师，由监考教师输入监考口令后，可使用当前IP地址继续考试。"
+    };
+</script><body onselectstart="return false" class="whiteBg ">
+<style>
+    .questionLi img{max-width:100%;}
+</style>
+<script type="text/javascript" src="//mooc-res2.chaoxing.com/exam-ans/js/common/jquery.min.js"></script>
+<script type="text/javascript" src="//mooc-res2.chaoxing.com/exam-ans/js/common/jquery-migrate.min.js"></script><script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/codemirror.js"></script>
+
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/clike.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/go.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/javascript.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/css.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/python.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/sql.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/xml.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/highlight.min.js"></script>
+
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/anyword-hint.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/beautify.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/brace-fold.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/clike.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/closebrackets.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/closetag.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/comment-fold.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/foldcode.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/foldgutter.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/go.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/r.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/indent-fold.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/javascript.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/javascript-hint.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/javascript-lint.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/jshint.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/lint.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/matchbrackets.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/php.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/powershell.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/python.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/ruby.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/show-hint.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/swift.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/vb.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/js/xml.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/lib/codemirror.css?v=2024-1101-1900"/>
+<link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/codemirror/foldgutter.min.css?v=2024-1101-1900"/>
+<link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/codemirror/lint.min.css?v=2024-1101-1900"/>
+<link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/codemirror/show-hint.min.css?v=2024-1101-1900"/>
+<link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/codemirror/common.css?v=2025-0314-1900"/>
+<link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/codemirror/selfTesting.css?v=2025-1207-1801"/>
+
+<script src="//mooc1.chaoxing.com/exam-ans/js/jquery.jqote2.min.js" ></script>
+
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/codemirror/codeEditor.js?v=2025-0821-2030"></script>
+<script>
+    window.noNeedCodemirrorInUeditor = true;
+</script>
+<link rel="stylesheet" type="text/css" href="//mooc1.chaoxing.com/exam-ans/mooc2/css/codemirror/codemirrorTip.css?v=2025-1015-1900"/>
+
+<div class="maskDiv maskTipDiv " style="display:none;" id="phytonTipBox">
+    <div class="popDiv wid640">
+        <div class="popHead">
+            <a href="javascript:void(0)" class="fr" style="display: inline-block;width: 18px;height: 18px;margin-top: 19px;"><img
+                    onclick="$('#phytonTipBox').hide();" src="//mooc1.chaoxing.com/exam-ans/images/popClose.png"></a>
+            <p class="fl fs18 colorDeep">Python 3.6.9<span class="fs14" style="color:#8A8B99">(已安装的第三方库如下)</span></p>
+        </div>
+        <div class="het62"></div>
+        <div class="phyton_center">
+            <table>
+                <thead>
+                <tr>
+                    <th width="100" align="left">名称</th>
+                    <th width="100" align="left">版本</th>
+                    <th align="left">描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td align="left">Pandas</td>
+                    <td align="left">1.15</td>
+                    <td align="left">数据分析和处理库，提供 DataFrame 等数据结构</td>
+                </tr>
+                <tr>
+                    <td align="left">NumPy</td>
+                    <td align="left">1.95</td>
+                    <td align="left">数值计算库，提供高性能的多维数组和数学函数</td>
+                </tr>
+                <tr>
+                    <td align="left">SciPy</td>
+                    <td align="left">1.54</td>
+                    <td align="left">科学计算库，基于 NumPy，包含统计、优化、信号处理等功能</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="popBottom">
+            <a href="javascript:void(0)" class="isKnowConfirm fr" onclick="$('#phytonTipBox').hide();">知道了</a>
+        </div>
+        <div class="het72"></div>
+    </div>
+</div>
+
+<div class="maskDiv maskTipDiv " style="display:none;" id="phyton312TipBox">
+    <div class="popDiv wid640">
+        <div class="popHead">
+            <a href="javascript:void(0)" class="fr" style="display: inline-block;width: 18px;height: 18px;margin-top: 19px;"><img
+                    onclick="$('#phyton312TipBox').hide();" src="//mooc1.chaoxing.com/exam-ans/images/popClose.png"></a>
+            <p class="fl fs18 colorDeep">Python 3.12.12<span class="fs14" style="color:#8A8B99">(已安装的第三方库如下)</span></p>
+        </div>
+        <div class="het62"></div>
+        <div class="phyton_center">
+            <table>
+                <thead>
+                <tr>
+                    <th width="100" align="left">名称</th>
+                    <th width="100" align="left">版本</th>
+                    <th align="left">描述</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td align="left">Pandas</td>
+                    <td align="left">2.3.3</td>
+                    <td align="left">数据分析和处理库，提供 DataFrame 等数据结构</td>
+                </tr>
+                <tr>
+                    <td align="left">NumPy</td>
+                    <td align="left"> 2.3.5</td>
+                    <td align="left">数值计算库，提供高性能的多维数组和数学函数</td>
+                </tr>
+                <tr>
+                    <td align="left">SciPy</td>
+                    <td align="left">1.16.3</td>
+                    <td align="left">科学计算库，基于 NumPy，包含统计、优化、信号处理等功能</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="popBottom">
+            <a href="javascript:void(0)" class="isKnowConfirm fr" onclick="$('#phyton312TipBox').hide();">知道了</a>
+        </div>
+        <div class="het72"></div>
+    </div>
+</div>
+
+
+
+<div class="maskDiv maskTipDiv " style="display:none;" id="cTipBox">
+    <div class="popDiv wid640">
+        <div class="popHead">
+            <a href="javascript:void(0)" class="fr" style="display: inline-block;width: 18px;height: 18px;margin-top: 19px;"><img
+                    onclick="$('#cTipBox').hide();" src="//mooc1.chaoxing.com/exam-ans/images/popClose.png"></a>
+            <p class="fl fs18 colorDeep">C 语言编译配置</span></p>
+        </div>
+        <div class="het62"></div>
+        <div class="phyton_center">
+            <table>
+                <thead>
+                <tr>
+                    <th width="100" align="left">名称</th>
+                    <th width="100" align="left">版本</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td align="left">C语言标准</td>
+                    <td align="left">C11</td>
+                </tr>
+                <tr>
+                    <td align="left">编译器版本</td>
+                    <td align="left">GCC 11</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="popBottom">
+            <a href="javascript:void(0)" class="isKnowConfirm fr" onclick="$('#cTipBox').hide();">知道了</a>
+        </div>
+        <div class="het72"></div>
+    </div>
+</div>
+<script type="text/x-jqote-template" id="codeEditorTpl">
+    <%
+    var currLanguageName = this.currLanguageName || '请选择程序语言';
+    var currLanguageIndex = this.currLanguageIndex || -1;
+    var languages = this.languages;
+    var businessId = this.businessId;
+    %>
+
+    <!--弹窗-->
+    <div class="maskBox reset-mask" data-business-id="<%= businessId %>" style="display:none">
+        <div class="promptPop">
+            <div class="popHeadNew">
+                <a href="javascript:void(0)" class="popClose fr" data-business-id="<%= businessId %>"><img src="//mooc1.chaoxing.com/exam-ans/images/popClose.png"></a>
+                <p>提示</p>
+            </div>
+            <p class="popWord2">代码框将重置为初始状态，正在编辑的代码将清空，确认重置代码？</p>
+            <div class="popBottomNew">
+                <a href="javascript:void(0)" class="popbtn_bg btnReset fr" data-business-id="<%= businessId %>">重置代码</a>
+                <a href="javascript:void(0)" class="popbtn_border btnCancle fr" data-business-id="<%= businessId %>">取消</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="maskBox setting-mask" data-business-id="<%= businessId %>" style="display:none">
+        <div class="promptPop">
+            <div class="popHeadNew">
+                <a href="javascript:void(0)" class="popClose fr" data-business-id="<%= businessId %>"><img src="//mooc1.chaoxing.com/exam-ans/images/popClose.png"></a>
+                <p>代码编辑器设置</p>
+            </div>
+            <div class="popWord2">
+                <div class="flex-start">
+                    <span>字体设置</span>
+                    <strong class="selectBox fontList fontSizeChange" data-business-id="<%= businessId %>">
+                        <p value="0"><span>14px</span><i class="icon-arrow-down2"></i></p>
+                        <ul class="options optionsCon" style="display:none">
+                            <li><a href="javascript:;">12px</a></li>
+                            <li><a href="javascript:;">14px</a></li>
+                            <li><a href="javascript:;">16px</a></li>
+                            <li><a href="javascript:;">18px</a></li>
+                            <li><a href="javascript:;">20px</a></li>
+                            <li><a href="javascript:;">24px</a></li>
+                            <li><a href="javascript:;">36px</a></li>
+                            <li><a href="javascript:;">48px</a></li>
+                        </ul>
+                    </strong>
+                </div>
+            </div>
+            <div class="popBottomNew">
+                <a href="javascript:void(0)" class="popbtn_bg btnSetting fr" data-business-id="<%= businessId %>">确认</a>
+                <a href="javascript:void(0)" class="popbtn_border btnCancle fr" data-business-id="<%= businessId %>">取消</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="mrconBx" data-business-id="<%= businessId %>">
+        <div class="mrconTop">
+            <div>
+                <i class="icon-com fr setting" data-business-id="<%= businessId %>">
+                    <div class="Vector-pop">
+                        <span>设置</span>
+                        <div class="triangle-container">
+                            <div class="triangle"></div>
+                        </div>
+                    </div>
+                </i>
+                <i class="icon-com fr copy" data-business-id="<%= businessId %>">
+                    <div class="Vector-pop">
+                        <span>复制</span>
+                        <div class="triangle-container">
+                            <div class="triangle"></div>
+                        </div>
+                    </div>
+                </i>
+                <i class="icon-com fr refresh" data-business-id="<%= businessId %>">
+                    <div class="Vector-pop">
+                        <span>重置</span>
+                        <div class="triangle-container">
+                            <div class="triangle"></div>
+                        </div>
+                    </div>
+                </i>
+                <i class="icon-com fr format" data-business-id="<%= businessId %>">
+                    <div class="Vector-pop">
+                        <span>格式化</span>
+                        <div class="triangle-container">
+                            <div class="triangle"></div>
+                        </div>
+                    </div>
+                </i>
+
+                <% if(currLanguageIndex!== -1) { %>
+                <!--mooc2创建的程序题-->
+                <strong class="selectBoxLang fl langList" codenum="<%= currLanguageIndex %>" codename="<%= currLanguageName %>" data-business-id="<%= businessId %>">
+                    <p value="0"><span><%= currLanguageName %></span><i class="icon-arrow-down2"></i></p>
+                    <ul class="options " style="display:none">
+                        <% for(var pair of languages) { %>
+                        <li>
+                            <a href="javascript:void(0)" codename="<%= pair.codeName %>" code="<%= pair.code %>" codenum="<%= pair.codenum %>"><%= pair.codeName %></a>
+                            <% if (pair.codenum == '16') { %>
+                                 <span class="language_tips" onclick="$('#phytonTipBox').show();event.stopPropagation();"></span>
+                            <% } else if (pair.codenum == '1') { %>
+                                 <span class="language_tips" onclick="$('#cTipBox').show();event.stopPropagation();"></span>
+                            <% } else if (pair.codenum == '22') { %>
+                                 <span class="language_tips" onclick="$('#phyton312TipBox').show();event.stopPropagation();"></span>
+                            <% } %>
+                        </li>
+                        <% } %>
+                    </ul>
+                </strong>
+                <% } else { %>
+                <!--mooc1创建的程序题 || 新建的程序题-->
+                <strong class="selectBoxLang fl langList" data-business-id="<%= businessId %>">
+                    <p value="0"><span>请选择程序语言</span><i class="icon-arrow-down2"></i></p>
+                    <ul class="options " style="display:none">
+                        <% for(var pair of languages) { %>
+                        <li>
+                            <a href="javascript:void(0)" codename="<%= pair.codeName %>" code="<%= pair.code %>" codenum="<%= pair.codenum %>"><%= pair.codeName %></a>
+                            <% if (pair.codenum == '16') { %>
+                                  <span class="language_tips" onclick="$('#phytonTipBox').show();event.stopPropagation();"></span>
+                            <% } else if (pair.codenum == '1') { %>
+                                  <span class="language_tips" onclick="$('#cTipBox').show();event.stopPropagation();"></span>
+                            <% } else if (pair.codenum == '22') { %>
+                                  <span class="language_tips" onclick="$('#phyton312TipBox').show();event.stopPropagation();"></span>
+                            <% } %>
+                        </li>
+                        <% } %>
+                    </ul>
+                </strong>
+                <% } %>
+
+                <p class="clear"></p>
+            </div>
+        </div>
+    </div>
+
+
+</script>
+<input type="hidden" id="examAnswerPage" value="1"/>
+<input type="hidden" id="submitLimitTime" name="submitLimitTime" value="0"/>
+<input type="hidden" id="limitTime" name="limitTime" value="525600"/>
+<input type="hidden" id="wordNum" name="wordNum" value="0"/>
+<input type="hidden" id="qbanksystem" name="qbanksystem" value="0"/>
+<input type="hidden" id="qbankbackurl" name="qbankbackurl" value=""/>
+<input type="hidden" id="entryExamTime" value="">
+<input type="hidden" id="rentryExamTime" value="1782048486549">
+<input type="hidden" id="switchScreenControl" name="switchScreenControl" value="0"/>
+<input type="hidden" id="snapshotMonitor" name="snapshotMonitor" value="0"/>
+<input type="hidden" id="faceDetectionResult" name="faceDetectionResult" value=""/>
+<input type="hidden" id="pcclientSwitchout" name="pcclientSwitchout" value="0"/>
+<input type="hidden" id="saveUrl" name="saveUrl" value="/exam-ans/exam/test/reVersionSubmitTestNew"/>
+<input type="hidden" id="monitorEnc" name="monitorEnc" value="5671d6c17860594984ea4872137bd370"/>
+<input type="hidden" id="uploadTimeStamp" value="1782048486551" />
+<input type="hidden" id="uploadEnc" value="135ab66655158f5b7d34644c5aa3c508" />
+<input type="hidden" id="uploadtype" value="exam" />
+<input type="hidden" id="openc" value="6fc5f4723713511d9a2ad15222728831" />
+<input type="hidden" id="allowPaste" value="0"/>
+<input type="hidden" id="allowDownloadAttachment" value="0"/>
+<input type="hidden" id="receiveTime" value="1781947191000"/>
+<input type="hidden" id="limitTimeType" value="0"/>
+<input type="hidden" id="singleQuesLimitTime" value=""/>
+<input type="hidden" id="forbidAnsweredAgain" value="0"/>
+<input type="hidden" id="forbidGroupAnswerBack" value="0"/>
+<input type="hidden" id="groupLimitTimeType" value="0"/>
+<input type="hidden" id="groupMinLimitTime" value=""/>
+<input type="hidden" id="groupMaxLimitTime" value=""/>
+<input type="hidden" id="groupReceiveTime" value="0"/>
+<input type="hidden" id="thisQuestionGroupId" value="0"/>
+<input type="hidden" id="prevQuestionGroupId" value=""/>
+<input type="hidden" id="nextQuestionGroupId" value=""/>
+<input type="hidden" id="nextGroupPaperId" value=""/>
+<input type="hidden" id="nextGroupIndexDiff" value=""/>
+<input type="hidden" id="checkGroupPop" value="0"/>
+<input type="hidden" id="groupStart" value="0"/>
+<input type="hidden" id="teacherBrowseMode" value=""/>
+
+<input type="hidden" id="workExamUploadUrl" name="workExamUploadUrl" value=""/>
+<input type="hidden" id="workExamUploadCrcUrl" name="workExamUploadCrcUrl" value=""/>
+
+<input type="hidden" id="snapshotIntervalMin" value=""/>
+<input type="hidden" id="snapshotIntervalMax" value=""/>
+
+<input type="hidden" id="ExamWaterMark" value="胡青索250110900414"/>
+<input type="hidden" id="isChaoxingExamPc" value=""/>
+
+
+<input type="hidden" id="webSnapshotMonitor" value="0"/>
+<input type="hidden" id="faceimgs" value=""/>
+<input type="hidden" id="screenAbnormalNumberLimit" value="0"/>
+<input type="hidden" id="switchScreenNumberLimit" name="switchScreenNumberLimit" value="0"/>
+<input type="hidden" id="switchScreenDurationLimit" name="switchScreenDurationLimit" value="0"/>
+<input type="hidden" id="switchScreenThresholdTime" value="0"/>
+<input type="hidden" id="monitorStatus" name="monitorStatus" value="0"/><input type="hidden" id="monitorOp" name="monitorOp" value="-1"/>
+<input type="hidden" id="exitCount"  value="12"/>
+<input type="hidden" id="exitDuration" value="15420"/>
+
+<input type="hidden" id="screenAndCaptureCall" value="-1"/>
+<input type="hidden" id="xiaMenUniversity" value=""/>
+
+<input type="hidden" id="start" value="443" />
+<input type="hidden" id="isAccessibleCustomFid" name="isAccessibleCustomFid" value="0">
+
+<input type="hidden" id="liveMonitor" name="liveMonitor" value="0"/>
+<input type="hidden" id="electronSnapshotMonitor" value="0"/>
+
+<input type="hidden" id="allowAnswerBack" value="1"/>
+<input type="hidden" id="showNextPop" value="false"/>
+<input type="hidden" id="forbidInputText" value="0"/>
+<input type="hidden" id="answerTimes" name="answerTimes" value="2"/>
+<input type="hidden" id="examLocalStorageSwitch" name="examLocalStorageSwitch" value="1"/>
+<input type="hidden" id="examTimedSaveThreshold" name="examTimedSaveThreshold" value="1"/>
+<input type="hidden" id="examAttachAutoSave" name="examAttachAutoSave" value="1"/>
+<input type="hidden" id="checkExamBrowerBack" name="checkExamBrowerBack" value="1"/>
+<input type="hidden" id="selftestMode" name="selftestMode" value="1"/>
+<input type="hidden" id="pcExamClientSign"  value="true"/>
+<input type="hidden" id="monitorLock" value="0"/>
+<input type="hidden" id="answerLocked" value="0"/>
+<input type="hidden" id="isExamPage" value="1"/>
+<input type="hidden" id="forbidCloudFile" value="0"/>
+<input type="hidden" id="signConfig" value=""/>
+<input type="hidden" id="signversion" value="0"/>
+<input type="hidden" id="screenshotNumberLimit" value="0"/>
+<input type="hidden" id="screenshotNumber" value="0"/>
+<input type="hidden" id="screenshotOccupancyNumberLimit" value="0"/>
+<input type="hidden" id="screenshotOccupancyNumber" value="0"/>
+<input type="hidden" id="screenRecordDuration" value="0"/>
+<input type="hidden" id="screenRecordInterval" value="0"/>
+<input type="hidden" id="receiveScreenRecordLogUrl" value=""/>
+<input type="hidden" id="exitexamForcesubmit" value="0"/>
+<input type="hidden" id="forbidMultiterminal" value="0"/>
+
+<input type="hidden" id="studentInfoUrl" value=""/>
+<input type="hidden" id="supportSnapMonitorLog" value="false"/>
+<input type="hidden" id="webNeedFaceRecognition" value="0"/>
+<input type="hidden" id="needFaceRecognition" value="0"/>
+<input type="hidden" id="webNeedScreenShot" value="0"/>
+<input type="hidden" id="terminalLockType" value=""/>
+<input type="hidden" id="terminalUnlockWay" value="1"/>
+<input type="hidden" id="offlineExam" value="0"/>
+
+<script type="text/javascript" charset="utf-8" src="//mooc1.chaoxing.com/exam-ans/js/ServerHost.js?v=2020-1225-1627"></script>
+<script type="text/javascript" charset="utf-8" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/editor/ueditor.config.js?v=2025-0904-2027"></script>
+<script type="text/javascript" charset="utf-8" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/editor/ueditor.all.min.js?v=2026-0417-1940"></script>
+<script>
+    function getcookie(objname){
+    	var arrstr = document.cookie.split("; ");
+    	for(var i = 0;i < arrstr.length;i ++){
+    		var temp = arrstr[i].split("=");
+    		if(temp[0] == objname){ 
+    			return unescape(temp[1]);
+    		}
+    	}
+    }
+
+		window["uid"] = '403020109';
+	window["currentTime"] = '1782048486551';
+	window["uploadEnc"] = '135ab66655158f5b7d34644c5aa3c508';
+	window["uploadType"] = 'exam';
+	window.UEDITOR_CONFIG.forbidDownload = 'false';
+	window.UEDITOR_CONFIG.scaleEnabled = false;
+	window.UEDITOR_CONFIG.imageUrl = ServerHost.uploadDomain + "/ueditorupload/upload?t=1782048486551&enc2=135ab66655158f5b7d34644c5aa3c508&uid=403020109&uploadtype=exam";
+	window.UEDITOR_CONFIG.fileUrl = ServerHost.uploadDomain + "/ueditorupload/attachment?uploadtype=exam";
+	window.UEDITOR_CONFIG.lang = 'zh-cn';
+	window.fycourseDomain = "mobile3.chaoxing.com";
+
+	var isMirror = "false";
+	if (isMirror == "true") {
+		window.UEDITOR_CONFIG.toolbars = [['removeformat', 'formatmatch', 'paragraph', 'fontfamily', 'fontsize', 'bold', 'italic', 'underline', 'forecolor', 'justifyleft', 'justifycenter', 'justifyright', 'spechars', 'inserttable', 'mathml', 'edrawmath', 'insertimage', 'attachment_new', 'recording', 'audio', 'drawingboard', 'insertcodedefined']];
+	}
+
+	    	var toolbars = window.UEDITOR_CONFIG.toolbars[0];
+		if($.inArray('mathml', toolbars) >= 0){
+            toolbars.splice($.inArray('mathml', toolbars) , 1,'latex');
+            window.UEDITOR_CONFIG.toolbars[0] = toolbars;
+            window.UEDITOR_CONFIG.latexMode = 1;
+		}
+	
+		    window.UEDITOR_CONFIG._mathpix2latex = '264220623-147927239-483315974-s_cf651028086a66af7cf2375b1fae43e0';
+	
+	
+		    	            var toolBars = window.UEDITOR_CONFIG.toolbars[0];
+        var moudesArray = "".split(",");
+        for (var toolIndex = toolBars.length - 1; toolIndex >= 0; toolIndex--) {
+            if (moudesArray.indexOf(toolBars[toolIndex]) !== -1) {
+                toolBars.splice(toolIndex, 1);
+            }
+        }
+	    
+</script><script>window.UEDITOR_CONFIG.autoFloatEnabled = false; </script>
+<script type="text/javascript" charset="utf-8">
+    if('0' == 0){
+        window.UEDITOR_CONFIG.disableDraggable = true;
+        window.UEDITOR_CONFIG.disablePasteImage = true;
+    }
+	
+	    	var toolbars = window.UEDITOR_CONFIG.toolbars[0];
+        $(["insertimage","attachment_new","audio"]).each(function(index,obj){
+           toolbars.splice($.inArray(obj, toolbars), 1);
+        });
+    	window.UEDITOR_CONFIG.toolbars[0] = toolbars;
+    
+     
+     
+		</script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/poptoast.js?v=2023-0201-1903"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/poplayout.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/js/exam/phone/date.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/js/jquery.jqote2.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/js/richvideoedit/json2.js"></script>
+<script src="/ananas/space/exam/js/enc_js_exam.js?v=1782048486594"></script>
+<script src="//mooc1.chaoxing.com/exam-ans/safefilter/ajax-unlock.js?v=2024-0110-1404"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/js/jquery.nicescroll.min.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/selectBox.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/views/exam/phone/s/v3/js/textareaHeightAuto-test.js?v=1"></script>
+
+
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/exam/stu-do-exam.js?v=2026-0512-1900"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/exam/stu-exam-share.js?v=2026-0520-1456"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/mooc2/js/exam/pc-exam-sign-min.js?v=2025-0818-2200"></script>
+
+<script type="text/javascript">window.SUPPORT_AUDIO_SETTING = true; window.SUPPORT_AUDIO_CONTROL = true; window.Forbid_Attachment_Title = '0';</script>
+<div class="subNav top-subNav "  tabindex="0" role="option" aria-label="考试 页面">
+	    		<div class="sub-button fr"  style="display:none;" >
+					<a href="javascript:;" class="completeBtn fl" onclick="topreview();"  >整卷预览</a>
+				</div>
+	 考试</div><div class="het40"></div>
+<div class="FullfanyaMarking TiMu " id="fanyaMarking">
+	
+			
+		
+	<div class="marking_left_280" id="tabMarkingLeft">
+		<div class="padlr24">
+			<h2 class="h2_subject" tabindex="0" role="option" >自测1</h2>
+			<div class="mark_timeDiv"  style="display:none;"  tabindex="0" role="option" ><i><img src="//mooc1.chaoxing.com/exam-ans/mooc2/images/time_orange.png" class="no_view" tabindex="-1" aria-hidden="true" ></i><span id="timer">&nbsp;</span></div>
+
+			<dl class="mark_dl" tabindex="0" role="option" >
+				 				<dd>
+										<p>姓名: 胡青索</p>
+					<p>学号: 250110900414</p>
+									</dd>
+			</dl>
+			<div class="mark_info" tabindex="0" role="option" >
+				<p>题量:  444 </p>												    																		</div>
+            <!--------直播账号提示--------->
+					</div>
+		
+		<div style="display:none;">
+			<video id="screenCapture_video"></video>
+			<canvas id="screenCapture_canvas"></canvas>
+		    <img id="screenCapture_photo" class="no_view"/>
+	   </div>
+
+				
+	</div>
+		
+		
+		
+		<div class="marking_content">
+
+			
+		<div class="mark_table">
+									
+						<div class="whiteDiv questionLi singleQuesId ans-cc mainhet" data="890263433">
+							   			   <div  class="noSplitBx"  >
+
+								<div class="splitS-left">
+															
+				   																					<h2 class="type_tit" tabindex="0" role="option" >一、 单选题 （共 444 题） </h2>
+																	   																							<h3 class="mark_name colorDeep" tabindex="-1" aria-hidden="true" >444.
+												<span class="colorShallow" tabindex="0" role="option" aria-label='444. (单选题)' >
+							(单选题)
+						</span>
+						  
+						    						<div style="overflow:hidden;">
+								    							    								(单选题)()拉开“大跃进”的序幕。
+								    					    </div>
+									  </h3>
+								</div>
+
+								<div class="splitS-right">
+				<form id="submitTest" action="/exam-ans/exam/test/reVersionSubmitTestNew?keyboardDisplayRequiresUserAction=1&classId=147927239&courseId=264220623&testPaperId=9933055&testUserRelationId=169927967" method="post" style="pointer-events: none;">
+					<input type="hidden" id="courseId" name="courseId" value="264220623"/>
+					<input type="hidden" id="paperId" name="paperId" value="543582669"/>
+					<input type="hidden" id="testPaperId" name="testPaperId" value="9933055"/>
+					<input type="hidden" id="examCreateUserId" name="examCreateUserId" value="483315974"/>
+					<input type="hidden" id="feedbackEnc" name="feedbackEnc" value=""/>
+					<input type="hidden" id="testUserRelationId" name="testUserRelationId" value="169927967"/>
+					<input type="hidden" id="tId" name="tId" value="9933055"/>
+					<input type="hidden" id="subCount" name="subCount" value=""/>
+					<input type="hidden" id="remainTime" name="remainTime" value="31434678"/>
+					<input type="hidden" id="encRemainTime" name="encRemainTime" value="31434678"/>
+					<input type="hidden" id="encLastUpdateTime" name="encLastUpdateTime" value="1782048486551"/>
+					<input type="hidden" id="tempSave" name="tempSave" value="false"/>
+					<input type="hidden" id="timeOver" name="timeOver" value="false"/>
+					<input type="hidden" id="type" name="type" value="1"/>
+					<input type="hidden" id="classId" name="classId" value="147927239"/>
+					<input type="hidden" id="enc" name="enc" value="ecd3fc3786a8f693b4188b6baa9005fb"/>
+					<input type="hidden" id="examsystem" name="examsystem" value="0" />
+					<input type="hidden" name="start" value="443" />
+					<input type="hidden" id="userId" name="userId" value="403020109"/>
+					<input type="hidden" id="randomOptions" name="randomOptions" value="false"/>
+					<input type="hidden" id="cpi" name="cpi" value="483315974">
+					<input type="hidden" id="openc" name="openc" value="6fc5f4723713511d9a2ad15222728831">
+					<input type="hidden" id="enterPageTime" name="enterPageTime" value="1782048486551"/>
+					<input type="hidden" name="questionId" id="questionId" value="890263433"/>
+					<input type="hidden" name="questionScore" id="questionScore" value="5.0"/>
+					<input type="hidden" name="type890263433" value="0"/>
+					<input type="hidden" name="score890263433" value="5.0"/>
+					<input type="hidden" id="exitdtime" name="exitdtime" value="0"/>
+	                <input type="hidden" name="monitorforcesubmit" id="monitorforcesubmit" value="0"/>
+					<input type="hidden" id="answeredView" name="answeredView" value="1"/>
+					<input type="hidden" id="isAnswered" value="true"/>
+					<input type="hidden" id="paperGroupId" name="paperGroupId" value="0"/>
+															<input type="hidden" id="typeName890263433" name="typeName890263433" value="单选题"/>
+					 						<input type="hidden" id="answer890263433" name="answer890263433" value="B"/>
+<div class="stem_answer">
+                    <div class="clearfix answerBg singleoption" onclick="addChoice(this);"  tabindex="0" role="radio"  >
+            <span data="A" qid="890263433" class="addChoice choice890263433 num_option  fl">A</span>
+            <div class="fl answer_p">1957年冬季掀起以兴修水利、养猪积肥和改良土壤为中心的农业生产高潮</div>
+        </div>
+                    <div class="clearfix answerBg singleoption" onclick="addChoice(this);"  tabindex="0" role="radio"  aria-checked="true"  >
+            <span data="B" qid="890263433" class="addChoice choice890263433 num_option  check_answer  fl">B</span>
+            <div class="fl answer_p">1957年11月13日《人民日报》社论提出要在生产战线上来一个大的跃进</div>
+        </div>
+                    <div class="clearfix answerBg singleoption" onclick="addChoice(this);"  tabindex="0" role="radio"  >
+            <span data="C" qid="890263433" class="addChoice choice890263433 num_option  fl">C</span>
+            <div class="fl answer_p">1966年5月中共中央政治局扩大会议通过《中国共产党中央委员会通知》</div>
+        </div>
+                    <div class="clearfix answerBg singleoption" onclick="addChoice(this);"  tabindex="0" role="radio"  >
+            <span data="D" qid="890263433" class="addChoice choice890263433 num_option  fl">D</span>
+            <div class="fl answer_p">国民经济出现的严重困难局面<br>我的答案:</div>
+        </div>
+    </div>									</form>
+
+				   <!--解析-->
+	   
+		    			 				
+					<div class="eye_over"  >
+						<div class="eye_answer">
+							<div class="same status0">
+								<span class="myvacancy">我的答案:</span>
+							<span class="myanswer">B</span>
+							</div>
+							<div class="same status1">
+								<span class="myvacancy">正确答案:</span>
+								<span class="yoursanswer">B</span>
+							</div>
+							<div class="same status2">
+								<span class="analysis_answer">答案解析:</span>
+								<span class="status3"></span>
+							</div>
+							<div class="same status2 selfTestMarTop16">
+								<span class="analysis_answer">难易度:</span>
+								<span class="status3 ">
+									0.8-1.0 (易)
+																	</span>
+							</div>
+							<div class="same status2" id="viewSelfTestQuestionTopic">
+							</div>
+						</div>
+					</div>
+			  
+					
+					
+			 				
+				
+
+    	<!--解析end-->
+
+				</div>
+
+				</div>
+				
+					<div class="nextDiv">
+													 <a class="btnBlue btn_92 fs14" href="javascript:;" onClick="getTheNextQuestion(-1)"   >上一题</a>						
+																																							</div>
+
+				</div>
+			<!--单选题 end-->
+		</div>
+		
+		<!--草稿纸 -->
+			<div class="scratchPaperAndCalculator">
+													</div>
+			<div class="scratchpaper_wrap" style="display: none">
+				<div class="paperToolbar" id="paperToolbar">
+					<div class="toobar active" id="pencil"><i class="pencil"></i>画笔</div>
+					<div class="toobar" id="eraser"><i class="eraser"></i>橡皮擦</div>
+					<div class="toobar disable" id="undo"><i class="undo"></i>撤销</div>
+					<div class="toobar disable" id="redo"><i class="redo"></i>恢复</div>
+					<div class="toobar" id="clear"><i class="clear"></i> 清空</div>
+					<!-- <div id="save"><i></i>保存</div> -->
+					<div class="toobar" id="exit"><i class="exit"></i>退出</div>
+				</div>
+				<div id="canvas-container">
+					<canvas id="scratchpaper_canvas" width="800" height="600" class="pencil-cursor"></canvas>
+				</div>
+			</div>
+			<!--草稿纸 -->
+		
+    
+	</div>
+	<div class="Marking_right_280" id="rightHeight" style="z-index:1000;">
+				<div class="foldBox">
+              <a href="javascript:;" class="foldBtn" style="display: inline-block;"><i></i></a>
+              <a href="javascript:;" class="unfoldBtn" style="display: none;">答题卡</a>
+        </div>
+				<div class="bomHet50 questionStatusTip">
+        	<span class="dq"><i></i>当前题目</span>
+        	<span class="yp"><i></i>已作答</span>
+        	<span class="wp"><i></i>未作答</span>
+        </div>
+		<div class="topicNumber" id="topicNumberScroll" style="height:calc(100% - 80px);">
+            																			<div class="topicNumber_checkbox colorDeep fs14"><span class="numRight fr"></span>一、 单选题</div>
+													<ul class="topicNumber_list clearfix">
+																			
+																							<li  class=" active "   onclick="getTheQuestionByStart(0, '0');" >
+							1
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(1, '0');" >
+							2
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(2, '0');" >
+							3
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(3, '0');" >
+							4
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(4, '0');" >
+							5
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(5, '0');" >
+							6
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(6, '0');" >
+							7
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(7, '0');" >
+							8
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(8, '0');" >
+							9
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(9, '0');" >
+							10
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(10, '0');" >
+							11
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(11, '0');" >
+							12
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(12, '0');" >
+							13
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(13, '0');" >
+							14
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(14, '0');" >
+							15
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(15, '0');" >
+							16
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(16, '0');" >
+							17
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(17, '0');" >
+							18
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(18, '0');" >
+							19
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(19, '0');" >
+							20
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(20, '0');" >
+							21
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(21, '0');" >
+							22
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(22, '0');" >
+							23
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(23, '0');" >
+							24
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(24, '0');" >
+							25
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(25, '0');" >
+							26
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(26, '0');" >
+							27
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(27, '0');" >
+							28
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(28, '0');" >
+							29
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(29, '0');" >
+							30
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(30, '0');" >
+							31
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(31, '0');" >
+							32
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(32, '0');" >
+							33
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(33, '0');" >
+							34
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(34, '0');" >
+							35
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(35, '0');" >
+							36
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(36, '0');" >
+							37
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(37, '0');" >
+							38
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(38, '0');" >
+							39
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(39, '0');" >
+							40
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(40, '0');" >
+							41
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(41, '0');" >
+							42
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(42, '0');" >
+							43
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(43, '0');" >
+							44
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(44, '0');" >
+							45
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(45, '0');" >
+							46
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(46, '0');" >
+							47
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(47, '0');" >
+							48
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(48, '0');" >
+							49
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(49, '0');" >
+							50
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(50, '0');" >
+							51
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(51, '0');" >
+							52
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(52, '0');" >
+							53
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(53, '0');" >
+							54
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(54, '0');" >
+							55
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(55, '0');" >
+							56
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(56, '0');" >
+							57
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(57, '0');" >
+							58
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(58, '0');" >
+							59
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(59, '0');" >
+							60
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(60, '0');" >
+							61
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(61, '0');" >
+							62
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(62, '0');" >
+							63
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(63, '0');" >
+							64
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(64, '0');" >
+							65
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(65, '0');" >
+							66
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(66, '0');" >
+							67
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(67, '0');" >
+							68
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(68, '0');" >
+							69
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(69, '0');" >
+							70
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(70, '0');" >
+							71
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(71, '0');" >
+							72
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(72, '0');" >
+							73
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(73, '0');" >
+							74
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(74, '0');" >
+							75
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(75, '0');" >
+							76
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(76, '0');" >
+							77
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(77, '0');" >
+							78
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(78, '0');" >
+							79
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(79, '0');" >
+							80
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(80, '0');" >
+							81
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(81, '0');" >
+							82
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(82, '0');" >
+							83
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(83, '0');" >
+							84
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(84, '0');" >
+							85
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(85, '0');" >
+							86
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(86, '0');" >
+							87
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(87, '0');" >
+							88
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(88, '0');" >
+							89
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(89, '0');" >
+							90
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(90, '0');" >
+							91
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(91, '0');" >
+							92
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(92, '0');" >
+							93
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(93, '0');" >
+							94
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(94, '0');" >
+							95
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(95, '0');" >
+							96
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(96, '0');" >
+							97
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(97, '0');" >
+							98
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(98, '0');" >
+							99
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(99, '0');" >
+							100
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(100, '0');" >
+							101
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(101, '0');" >
+							102
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(102, '0');" >
+							103
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(103, '0');" >
+							104
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(104, '0');" >
+							105
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(105, '0');" >
+							106
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(106, '0');" >
+							107
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(107, '0');" >
+							108
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(108, '0');" >
+							109
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(109, '0');" >
+							110
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(110, '0');" >
+							111
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(111, '0');" >
+							112
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(112, '0');" >
+							113
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(113, '0');" >
+							114
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(114, '0');" >
+							115
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(115, '0');" >
+							116
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(116, '0');" >
+							117
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(117, '0');" >
+							118
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(118, '0');" >
+							119
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(119, '0');" >
+							120
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(120, '0');" >
+							121
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(121, '0');" >
+							122
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(122, '0');" >
+							123
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(123, '0');" >
+							124
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(124, '0');" >
+							125
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(125, '0');" >
+							126
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(126, '0');" >
+							127
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(127, '0');" >
+							128
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(128, '0');" >
+							129
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(129, '0');" >
+							130
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(130, '0');" >
+							131
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(131, '0');" >
+							132
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(132, '0');" >
+							133
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(133, '0');" >
+							134
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(134, '0');" >
+							135
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(135, '0');" >
+							136
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(136, '0');" >
+							137
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(137, '0');" >
+							138
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(138, '0');" >
+							139
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(139, '0');" >
+							140
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(140, '0');" >
+							141
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(141, '0');" >
+							142
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(142, '0');" >
+							143
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(143, '0');" >
+							144
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(144, '0');" >
+							145
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(145, '0');" >
+							146
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(146, '0');" >
+							147
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(147, '0');" >
+							148
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(148, '0');" >
+							149
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(149, '0');" >
+							150
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(150, '0');" >
+							151
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(151, '0');" >
+							152
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(152, '0');" >
+							153
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(153, '0');" >
+							154
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(154, '0');" >
+							155
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(155, '0');" >
+							156
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(156, '0');" >
+							157
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(157, '0');" >
+							158
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(158, '0');" >
+							159
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(159, '0');" >
+							160
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(160, '0');" >
+							161
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(161, '0');" >
+							162
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(162, '0');" >
+							163
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(163, '0');" >
+							164
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(164, '0');" >
+							165
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(165, '0');" >
+							166
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(166, '0');" >
+							167
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(167, '0');" >
+							168
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(168, '0');" >
+							169
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(169, '0');" >
+							170
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(170, '0');" >
+							171
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(171, '0');" >
+							172
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(172, '0');" >
+							173
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(173, '0');" >
+							174
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(174, '0');" >
+							175
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(175, '0');" >
+							176
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(176, '0');" >
+							177
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(177, '0');" >
+							178
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(178, '0');" >
+							179
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(179, '0');" >
+							180
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(180, '0');" >
+							181
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(181, '0');" >
+							182
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(182, '0');" >
+							183
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(183, '0');" >
+							184
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(184, '0');" >
+							185
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(185, '0');" >
+							186
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(186, '0');" >
+							187
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(187, '0');" >
+							188
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(188, '0');" >
+							189
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(189, '0');" >
+							190
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(190, '0');" >
+							191
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(191, '0');" >
+							192
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(192, '0');" >
+							193
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(193, '0');" >
+							194
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(194, '0');" >
+							195
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(195, '0');" >
+							196
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(196, '0');" >
+							197
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(197, '0');" >
+							198
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(198, '0');" >
+							199
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(199, '0');" >
+							200
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(200, '0');" >
+							201
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(201, '0');" >
+							202
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(202, '0');" >
+							203
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(203, '0');" >
+							204
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(204, '0');" >
+							205
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(205, '0');" >
+							206
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(206, '0');" >
+							207
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(207, '0');" >
+							208
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(208, '0');" >
+							209
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(209, '0');" >
+							210
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(210, '0');" >
+							211
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(211, '0');" >
+							212
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(212, '0');" >
+							213
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(213, '0');" >
+							214
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(214, '0');" >
+							215
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(215, '0');" >
+							216
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(216, '0');" >
+							217
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(217, '0');" >
+							218
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(218, '0');" >
+							219
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(219, '0');" >
+							220
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(220, '0');" >
+							221
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(221, '0');" >
+							222
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(222, '0');" >
+							223
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(223, '0');" >
+							224
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(224, '0');" >
+							225
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(225, '0');" >
+							226
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(226, '0');" >
+							227
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(227, '0');" >
+							228
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(228, '0');" >
+							229
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(229, '0');" >
+							230
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(230, '0');" >
+							231
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(231, '0');" >
+							232
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(232, '0');" >
+							233
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(233, '0');" >
+							234
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(234, '0');" >
+							235
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(235, '0');" >
+							236
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(236, '0');" >
+							237
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(237, '0');" >
+							238
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(238, '0');" >
+							239
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(239, '0');" >
+							240
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(240, '0');" >
+							241
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(241, '0');" >
+							242
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(242, '0');" >
+							243
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(243, '0');" >
+							244
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(244, '0');" >
+							245
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(245, '0');" >
+							246
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(246, '0');" >
+							247
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(247, '0');" >
+							248
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(248, '0');" >
+							249
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(249, '0');" >
+							250
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(250, '0');" >
+							251
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(251, '0');" >
+							252
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(252, '0');" >
+							253
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(253, '0');" >
+							254
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(254, '0');" >
+							255
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(255, '0');" >
+							256
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(256, '0');" >
+							257
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(257, '0');" >
+							258
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(258, '0');" >
+							259
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(259, '0');" >
+							260
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(260, '0');" >
+							261
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(261, '0');" >
+							262
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(262, '0');" >
+							263
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(263, '0');" >
+							264
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(264, '0');" >
+							265
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(265, '0');" >
+							266
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(266, '0');" >
+							267
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(267, '0');" >
+							268
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(268, '0');" >
+							269
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(269, '0');" >
+							270
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(270, '0');" >
+							271
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(271, '0');" >
+							272
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(272, '0');" >
+							273
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(273, '0');" >
+							274
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(274, '0');" >
+							275
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(275, '0');" >
+							276
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(276, '0');" >
+							277
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(277, '0');" >
+							278
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(278, '0');" >
+							279
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(279, '0');" >
+							280
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(280, '0');" >
+							281
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(281, '0');" >
+							282
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(282, '0');" >
+							283
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(283, '0');" >
+							284
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(284, '0');" >
+							285
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(285, '0');" >
+							286
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(286, '0');" >
+							287
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(287, '0');" >
+							288
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(288, '0');" >
+							289
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(289, '0');" >
+							290
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(290, '0');" >
+							291
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(291, '0');" >
+							292
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(292, '0');" >
+							293
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(293, '0');" >
+							294
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(294, '0');" >
+							295
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(295, '0');" >
+							296
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(296, '0');" >
+							297
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(297, '0');" >
+							298
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(298, '0');" >
+							299
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(299, '0');" >
+							300
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(300, '0');" >
+							301
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(301, '0');" >
+							302
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(302, '0');" >
+							303
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(303, '0');" >
+							304
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(304, '0');" >
+							305
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(305, '0');" >
+							306
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(306, '0');" >
+							307
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(307, '0');" >
+							308
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(308, '0');" >
+							309
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(309, '0');" >
+							310
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(310, '0');" >
+							311
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(311, '0');" >
+							312
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(312, '0');" >
+							313
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(313, '0');" >
+							314
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(314, '0');" >
+							315
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(315, '0');" >
+							316
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(316, '0');" >
+							317
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(317, '0');" >
+							318
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(318, '0');" >
+							319
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(319, '0');" >
+							320
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(320, '0');" >
+							321
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(321, '0');" >
+							322
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(322, '0');" >
+							323
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(323, '0');" >
+							324
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(324, '0');" >
+							325
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(325, '0');" >
+							326
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(326, '0');" >
+							327
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(327, '0');" >
+							328
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(328, '0');" >
+							329
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(329, '0');" >
+							330
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(330, '0');" >
+							331
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(331, '0');" >
+							332
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(332, '0');" >
+							333
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(333, '0');" >
+							334
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(334, '0');" >
+							335
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(335, '0');" >
+							336
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(336, '0');" >
+							337
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(337, '0');" >
+							338
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(338, '0');" >
+							339
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(339, '0');" >
+							340
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(340, '0');" >
+							341
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(341, '0');" >
+							342
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(342, '0');" >
+							343
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(343, '0');" >
+							344
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(344, '0');" >
+							345
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(345, '0');" >
+							346
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(346, '0');" >
+							347
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(347, '0');" >
+							348
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(348, '0');" >
+							349
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(349, '0');" >
+							350
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(350, '0');" >
+							351
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(351, '0');" >
+							352
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(352, '0');" >
+							353
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(353, '0');" >
+							354
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(354, '0');" >
+							355
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(355, '0');" >
+							356
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(356, '0');" >
+							357
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(357, '0');" >
+							358
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(358, '0');" >
+							359
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(359, '0');" >
+							360
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(360, '0');" >
+							361
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(361, '0');" >
+							362
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(362, '0');" >
+							363
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(363, '0');" >
+							364
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(364, '0');" >
+							365
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(365, '0');" >
+							366
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(366, '0');" >
+							367
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(367, '0');" >
+							368
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(368, '0');" >
+							369
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(369, '0');" >
+							370
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(370, '0');" >
+							371
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(371, '0');" >
+							372
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(372, '0');" >
+							373
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(373, '0');" >
+							374
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(374, '0');" >
+							375
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(375, '0');" >
+							376
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(376, '0');" >
+							377
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(377, '0');" >
+							378
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(378, '0');" >
+							379
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(379, '0');" >
+							380
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(380, '0');" >
+							381
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(381, '0');" >
+							382
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(382, '0');" >
+							383
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(383, '0');" >
+							384
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(384, '0');" >
+							385
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(385, '0');" >
+							386
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(386, '0');" >
+							387
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(387, '0');" >
+							388
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(388, '0');" >
+							389
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(389, '0');" >
+							390
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(390, '0');" >
+							391
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(391, '0');" >
+							392
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(392, '0');" >
+							393
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(393, '0');" >
+							394
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(394, '0');" >
+							395
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(395, '0');" >
+							396
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(396, '0');" >
+							397
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(397, '0');" >
+							398
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(398, '0');" >
+							399
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(399, '0');" >
+							400
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(400, '0');" >
+							401
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(401, '0');" >
+							402
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(402, '0');" >
+							403
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(403, '0');" >
+							404
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(404, '0');" >
+							405
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(405, '0');" >
+							406
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(406, '0');" >
+							407
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(407, '0');" >
+							408
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(408, '0');" >
+							409
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(409, '0');" >
+							410
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(410, '0');" >
+							411
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(411, '0');" >
+							412
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(412, '0');" >
+							413
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(413, '0');" >
+							414
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(414, '0');" >
+							415
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(415, '0');" >
+							416
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(416, '0');" >
+							417
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(417, '0');" >
+							418
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(418, '0');" >
+							419
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(419, '0');" >
+							420
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(420, '0');" >
+							421
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(421, '0');" >
+							422
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(422, '0');" >
+							423
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(423, '0');" >
+							424
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(424, '0');" >
+							425
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(425, '0');" >
+							426
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(426, '0');" >
+							427
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(427, '0');" >
+							428
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(428, '0');" >
+							429
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(429, '0');" >
+							430
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(430, '0');" >
+							431
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(431, '0');" >
+							432
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(432, '0');" >
+							433
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(433, '0');" >
+							434
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(434, '0');" >
+							435
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(435, '0');" >
+							436
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(436, '0');" >
+							437
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(437, '0');" >
+							438
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(438, '0');" >
+							439
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(439, '0');" >
+							440
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(440, '0');" >
+							441
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(441, '0');" >
+							442
+						</li>
+																													<li  class=" active "   onclick="getTheQuestionByStart(442, '0');" >
+							443
+						</li>
+																													<li  class=" current "   onclick="getTheQuestionByStart(443, '0');" >
+							444
+						</li>
+																				</ul>
+												</div>
+	</div>
+
+</div>
+
+
+
+<input type="hidden" id="allowMultiplePendingSelfTask" value=""/>
+<div class="maskDiv " style="display:none;z-index:2001;"  id="timeOverSubmitConfirmPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:300px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<p class="popWord fs16 colorIn" style="margin: 10px 2px;">作答时间耗尽，试卷已提交</p>
+			<p class="popWord fs16 colorIn" style="margin: 2px 2px;">试卷领取时间：2026-06-20 17:19</p>
+			 <p class="popWord fs16 colorIn" style="margin: 10px 2px;">考试用时：<span class="consumeMinutes">525600</span>分钟</p>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="">知道了</a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv " style="display:none;z-index:2001;" id="showLoginInfo">
+    <div class="popDiv liveEwmPop">
+        <div class="popHead">
+            <a href="#" class="popClose fr"><img src="//mooc1.chaoxing.com/exam-ans/mooc2/images/popClose.png" onclick="$('#showLoginInfo').fullFadeOut();"/></a>
+            <p class="fl fs18 colorDeep">直播二维码</p>
+        </div>
+        <div class="het62"></div>
+        <div class="livePop_con">
+            <div class="fs16 color1 liveweminfo">
+                <p>账号：<span class="color0" id="loginName"></span></p>
+                <p>密码：<span class="color0" id="password"></span></p>
+            </div>
+            <dl class="pop_ewm">
+                <dd>二维码仅考试期间有效</dd>
+                <dt><img id="ewmUrl" src="" onclick="rereshSecondDeviceQRCode()" /></dt>
+            </dl>
+        </div>
+
+    </div>
+</div>
+
+<div class="maskDiv " style="display:none;z-index:2000;"  id="submitConfirmPop" tabindex="0" role="alertdialog" aria-label="交卷" >
+	<div class="popDiv wid440 Marking" style="left:39%;top:30%;width:450px;min-height:200px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep" tabindex="0" role="option" >提示</p>
+				<a href="javascript:;" class="popClose fr" tabindex="0" role="button" aria-label="关闭"
+									>
+					<img tabindex="-1" aria-hidden="true" src="//mooc1.chaoxing.com/exam-ans/mooc2/images/popClose.png" onclick="$('#submitConfirmPop').fullFadeOut();$('#showNextPop').val('false');">
+				</a>
+			</div>
+			<div class="het62"></div>
+			<p class="popWord fs16 colorIn" style="margin: 30px 2px;" tabindex="0" role="option"  >确认交卷？</p>
+
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirm" onclick=""
+									>确定</a>
+				<a href="javascript:" class="btnBlue btn_92_cancel fr fs14" onclick="$('#submitConfirmPop').fullFadeOut();$('#showNextPop').val('false');"
+									>取消</a>
+			</div>
+			<div class="het72" tabindex="0" role="option"  aria-label="弹窗结尾" ></div>
+				</div>
+</div>
+
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="audioLimitTimesWin">
+	<div class="popSetDiv wid440">
+			<div class="popHead RadisTop">
+				<a href="javascript:;" class="popClose fr" onclick="$('#audioLimitTimesWin').fullFadeOut();"><img src="//mooc1.chaoxing.com/exam-ans/mooc2/images/popClose.png" /></a>
+				<p class="fl fs18 color1">提示</p>
+			</div>
+			<div class="het62"></div>
+			<p class="popWord fs16 color2 audioLimitTimesTip">此附件仅支持打开 <span></span> 次，你已打开 <span></span> 次，不能再次打开</p>
+			<div class="popBottom RadisBom">
+				<a href="javascript:;" class="jb_btn jb_btn_92 fr fs14" onclick="$('#audioLimitTimesWin').fullFadeOut();">知道了</a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv popMoveShowHide" id="confirmEnterWin" style="display:none;z-index:1000;" tabindex="0" role="alertdialog" aria-label="进入考试"
+	 >
+	<div class="popDiv wid440 popMove">
+		<div class="popHead">
+			<a href="javascript:;" class="popClose fr" tabindex="0" role="button" aria-label="关闭"
+				>
+				<img tabindex="-1" src="//mooc1.chaoxing.com/exam-ans/mooc2/images/popClose.png" onclick="$('#confirmEnterWin').fullFadeOut();"/>
+			</a>
+			<p class="fl fs18 colorDeep" style="font-size:18px;" tabindex="-1"  >提示</p>
+		</div>
+		<div class="het62"></div>
+		<div class="readPad" style="padding-bottom:0px;" tabindex="0" role="option" >
+			<div class=" tip" style="line-height:26px;font-size:16px;min-height: 140px;width:100%;"></div>
+		</div>
+		<div class="popBottom">
+			<a tabindex="0" role="button" id="tabIntoexam2" href="javascript:;" class="jb_btn jb_btn_92 fr fs14 confirm" onclick="">进入考试</a>
+			<a tabindex="0" role="button" href="javascript:;" class="btnBlue btn_92_cancel fr fs14" onclick="$('#confirmEnterWin').fullFadeOut();" style="width:88px;"
+							>取消</a>
+		</div>
+		<div class="het72" tabindex="0" role="option" id="confirmEnterWinEnd" aria-label="弹窗结尾"  ></div>
+	</div>
+</div>
+
+
+<div class="maskDiv " style="display:none;z-index:1000;"  id="multiTerminalWin">
+	<div class="popDiv wid440 Marking" style="left:50%;top:40%;width:480px;height:300px;margin-left:-240px;">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<p class="popWord fs16 colorIn" style="margin:18px 2px;"></p>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="">继续考试</a>
+				<a href="javascript:;" class="btnBlue btn_92_cancel fr fs14 cancel" onclick="$('#confirmEnterWin').fullFadeOut();" style="width:88px;">退出考试</a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="examTipsPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:300px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;"></div>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="$('#examTipsPop').fullFadeOut();">知道了</a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="singleQuesLimitTimePop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:200px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;position:relative;top:20px;"> 最后一题作答时间已用完，请交卷 </div>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="singleQuesLimitTimeConfirm(1);"> 交卷 </a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="groupPaperLimitTimePop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:200px">
+		<div class="popHead">
+			<p class="fl fs18 colorDeep">提示</p>
+		</div>
+		<div class="het62"></div>
+		<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;position:relative;top:20px;">
+			 当前考试需按分卷顺序作答，确认进入下一个分卷？ </div>
+		<div class="popBottom">
+			<a href="javascript:" class="jb_btn jb_btn_92 fr fs14" onclick="groupLimitTimeConfirm();">确定</a>
+			<a href="javascript:" class="btnBlue btn_92_cancel fr fs14" onclick="$('#groupPaperLimitTimePop').fullFadeOut();$('#groupStart').val(0)">取消</a>
+		</div>
+		<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="groupPaperLimitTimeOverPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:200px">
+		<div class="popHead">
+			<p class="fl fs18 colorDeep">提示</p>
+		</div>
+		<div class="het62"></div>
+		<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;position:relative;top:20px;">
+							当前分卷作答时间已用完，将进入下一分卷					</div>
+		<div class="popBottom">
+			<a href="javascript:" class="jb_btn jb_btn_92 fr fs14" onclick="groupLimitTimeConfirm();">确定</a>
+		</div>
+		<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="groupPaperLimitTimeSubmitPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:200px">
+		<div class="popHead">
+			<p class="fl fs18 colorDeep">提示</p>
+		</div>
+		<div class="het62"></div>
+		<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;position:relative;top:20px;">当前分卷需限时耗尽才允许提交</div>
+		<div class="popBottom">
+			<a href="javascript:" class="jb_btn jb_btn_92 fr fs14" onclick="groupLimitTimeConfirm();">确定</a>
+		</div>
+		<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv " style="display:none;z-index:1000;"  id="switchScreenPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:220px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;position:relative;top:20px;"></div>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="$('#switchScreenPop').fullFadeOut();">确定</a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+
+<div class="maskDiv popMoveShowHide" id="confirmRetestWin" style="display:none;z-index:1000;" tabindex="0" role="alertdialog" aria-label="重考提示"
+	  >
+	<div class="popDiv wid440 popMove">
+		<div class="popHead">
+			<a href="javascript:;" class="popClose fr"  tabindex="0" role="button" aria-label="关闭"
+				>
+				<img tabindex="-1" src="//mooc1.chaoxing.com/exam-ans/mooc2/images/popClose.png" onclick="$('#confirmRetestWin').fullFadeOut();"/></a>
+			<p class="fl fs18 colorDeep" style="font-size:18px;" >提示</p>
+		</div>
+		<div class="het62"></div>
+		<div class="readPad" style="padding-bottom:0px;" tabindex="0" role="option" >
+			<div class=" tip" style="line-height:26px;font-size:16px;min-height: 80px;width:100%;">开始重考后，请重新提交考试，否则可能影响最终成绩。本次考试教师已设置取最后一次考试成绩为最终成绩，请确认是否重考？</div>
+		</div>
+		<div class="popBottom">
+			<a tabindex="0" role="button" href="javascript:;" class="jb_btn jb_btn_92 fr fs14 confirm" onclick="">确定重考</a>
+			<a tabindex="0" role="button" href="javascript:;" class="btnBlue btn_92_cancel fr fs14" onclick="$('#confirmRetestWin').fullFadeOut();" style="width:88px;"
+							>取消</a>
+		</div>
+					<div class="het72"></div>
+			</div>
+</div>
+
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="exitTimesSubmitPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:220px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;" data="系统检测到你已离开考试{1}次，将强制收卷"></div>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="$('#exitTimesSubmitPop').fullFadeOut();" data="知道了"></a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="exitDurationSubmitPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:220px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;" data="系统检测到你的切屏时长已超过{1}秒，将强制收卷"></div>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="$('#exitDurationSubmitPop').fullFadeOut();" data="知道了"></a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;z-index:2001;"  id="teacherNoticePop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:300px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">教师提醒</p>
+			</div>
+			<div class="het62"></div>
+			<div class="popWord fs16 colorIn" style="margin: 10px 2px; height:200px;overflow:auto;"></div>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="$('#teacherNoticePop').fullFadeOut()">知道了</a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+
+
+<div class="maskDiv taskStatusShowHide" style="display:none;z-index:1000;" id="stuSelfTestAutoPaper">
+	<div class="popDiv wid440 centered">
+		<div class="popHead">
+			<a href="javascript:" class="popClose popMoveDele fr"><img src="//mooc1.chaoxing.com/exam-ans/mooc2/images/popClose.png" /></a>
+			<p class="fl fs18 colorDeep">提示</p>
+		</div>
+		<div class="het62"></div>
+		<div class="barDiv">
+			<div class="barCon" style="width:10%"></div>
+		</div>
+        <div><p class="barInfo" style="margin-bottom:20px"><span id="taskTip">自测试卷生成中，已完成</span><span id="taskrate">0%</span></p></div>
+		<div class="popBottom">
+								</div>
+		<div class="het72"></div>
+	</div>
+</div>
+
+
+
+<div class="maskDiv"  style="display:none;z-index:1000;"  id="faceRecognitionComparePop">
+	<div class="popDiv iden_resultPop">
+        		<div class="popHead">
+        			<a href="javascript:" class="popClose fr" onclick="$('#faceRecognitionComparePop').fullFadeOut();"><img src="//mooc1.chaoxing.com/exam-ans/mooc2/images/popClose.png" /></a>
+        			<p class="fl fs18 colorDeep">识别结果</p>
+        		</div>
+        		<div class="het62"></div>
+                <div class="face_Box face_compared">
+                    <p class="contrastTit textCenter face_result"><i class="icon"></i><span class="tip"></span></p>
+                    <div class="contrastImgBox textCenter">
+                        <dl>
+                            <dt><img src="" class="currentFaceId"></dt>
+                            <dd>本次采集</dd>
+                        </dl>
+                        <dl class="greenDL">
+                            <dt><img src="" class="collectedFaceId"></dt>
+                            <dd class="archivePhoto">档案照片</dd>
+                        </dl>
+                    </div>
+                    <div class="face_video_btn textCenter marTop60 face_fail_actionbtn">
+                                                <a href="javascript:" class="disble_time_btn jb_btn_158 fs14 reFaceRecognition">重新识别</a>
+                    </div>
+                </div>
+				<div class="face_Box face_comparing">
+                    <p class="contrast_loading"><i><img src="//mooc1.chaoxing.com/exam-ans/mooc2/images/load.png"></i>人脸比对中...</p>
+                </div>
+	</div>
+</div>
+
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="forceSubmitTip">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:220px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;"></div>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="$('#forceSubmitTip').fullFadeOut();" data="知道了"></a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="examAddTimeRemindTip">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;max-height:360px;">
+			<div class="popHead"><p class="fl fs18 colorDeep">延时提醒</p></div>
+			<div class="het62"></div>
+			<p class="popWord fs16 colorIn" style="margin:6px 2px;">该考试教师进行延时操作</p>
+			<p class="popWord fs16 colorIn minutes" style="margin:2px 2px;" data="延时时长：[1]分钟"></p>
+			<p class="popWord fs16 colorIn remind" style="margin:6px 2px;overflow: auto;max-height:160px;word-break: break-all;" data="延时原因：[1]"></p>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="$('#examAddTimeRemindTip').fullFadeOut();" data="知道了"></a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+
+<div class="maskDiv" style="display:none;"  id="confirmPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;">
+			<div class="popHead">
+				<a href="javascript:" class="popClose fr" onclick="$('#confirmPop').fullFadeOut();"><img src="//mooc1.chaoxing.com/exam-ans/mooc2/images/popClose.png" /></a>
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<p class="popWord fs16 colorIn deleteRecoverTip">删除后将无法恢复，确认删除？</p>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmDelete" onclick="">确定</a>
+				<a href="javascript:" onclick="$('#confirmPop').fullFadeOut();" class="btnBlue btn_92_cancel fr fs14">取消</a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;"  id="examWrongQuesPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;">
+			<div class="popHead">
+				<a href="javascript:" class="popClose fr" onclick="$('#examWrongQuesPop').fullFadeOut();"><img src="//mooc1.chaoxing.com/exam-ans/mooc2/images/popClose.png" /></a>
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<p class="popWord fs16 colorIn deleteRecoverTip">您有正在进行的错题练习，是否继续上次作答？</p>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 continueAnswer" onclick="">继续作答</a>
+				<a href="javascript:" onclick="" class="btnBlue btn_92_cancel fr fs14 reAnswer">重刷</a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+
+<div class="maskDiv " style="display:none;z-index:1000;"  id="lockExamWin">
+	<div class="popDiv wid440 Marking" style="left:50%;top:40%;width:480px;height:220px;margin-left:-240px;">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<p class="popWord fs16 colorIn" style="margin:6px 2px;padding:26px 30px;"></p>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="">申诉</a>
+				<a href="javascript:;" class="btnBlue btn_92_cancel fr fs14 cancel" onclick="" style="width:88px;">退出考试</a>			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="exitexamForcesubmitWin">
+	<div class="popDiv wid440 Marking" style="left:50%;top:40%;width:480px;height:220px;margin-left:-240px;">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<p class="popWord fs16 colorIn" style="margin:6px 2px;padding:26px 30px;">退出考试将强制收卷，确认退出?</p>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirm" onclick="">退出</a>
+				<a href="javascript:;" class="btnBlue btn_92_cancel fr fs14 cancel" onclick="$('#exitexamForcesubmitWin').fullFadeOut();" style="width:88px;">取消</a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="exitexamForcesubmitPop">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:220px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;">系统检测到曾退出考试，将强制收卷</div>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="$('#exitexamForcesubmitPop').fullFadeOut();" data="知道了"></a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+<div class="maskDiv" style="display:none;z-index:1000;"  id="forbidMultiterminalForceSubmitTip">
+	<div class="popDiv wid440 Marking" style="left:39%;top:40%;width:480px;height:220px">
+			<div class="popHead">
+				<p class="fl fs18 colorDeep">提示</p>
+			</div>
+			<div class="het62"></div>
+			<div class="popWord fs16 colorIn" style="margin: 6px 2px;overflow: auto;height:160px;word-break: break-all;">系统检测到学生考试多终端，将强制收卷</div>
+			<div class="popBottom">
+				<a href="javascript:" class="jb_btn jb_btn_92 fr fs14 confirmClose" onclick="$('#exitexamForcesubmitPop').fullFadeOut();" data="知道了"></a>
+			</div>
+			<div class="het72"></div>
+	</div>
+</div>
+
+
+
+
+<div class="maskDiv" id="deviceLockPopMask" style="display:none;z-index:1000;">
+<div class="deviceLockPop">
+		<h3 class="devicTit">设备已锁定</h3>
+		<div class="grayinfos">
+			<p class="infos">姓名：<span class="stuName">胡青索</span></p>
+			<p class="infos stuNo">学号：<span class="stuNo">250110900414</span></p>
+			<p class="infos">锁定原因：<span class="lockReason"></span></p>
+		</div>
+		<p class="deviceword"></p>
+		<div class="passwordBox">
+			<input type="input" maxlength="1"/>
+			<input type="input" maxlength="1" />
+			<input type="input" maxlength="1" />
+			<input type="input" maxlength="1" />
+			<input type="input" maxlength="1" />
+			<input type="input" maxlength="1" />
+		</div>
+		<div class="popSubmit">
+			<a href="javascript:void(0)" class="subLine closebtn">退出考试</a> 			<a href="javascript:void(0)" class="subBlueBg confirmbtn">确定</a>
+			<a href="/keeper/appeal/page/submit?clazzId=147927239&examId=9933055&personId=483315974&answerId=169927967&type=4" target="_blank" class="subBlueBg appealbtn">申诉</a>
+		</div>
+  </div>
+</div>
+
+<script>
+	$(document).keydown(function(event){
+		if ((event.altKey)&& ((event.keyCode==37)|| (event.keyCode==39))) {
+			event.returnValue=false;
+			return false;
+		}
+
+		if(event.keyCode==116){
+			return false;
+		}
+
+		if((event.ctrlKey) && (event.keyCode==82)){
+			return false;
+		}
+		if(event.keyCode==13) {
+			if (typeof (event.target) != "undefined" && event.target != null) {
+				if (!$(event.target).hasClass("canEnterType")) {
+					event.preventDefault();
+				}
+			} else {
+				//屏蔽回车提交
+				event.preventDefault();
+			}
+		}
+	});
+
+	var maxSecond = 59;
+	maxtime = 31434678;
+	var limitTime = 525600 * 60;
+	var testPaperStatus = "1";
+
+	if(maxtime >= 0) {
+		timers = setInterval("CountDown()",1000);
+		function CountDown(){
+			if(maxtime>0){
+				minutes = Math.floor(maxtime/60);
+				if(minutes < 10) {
+					minutes = "0" + minutes;
+				}
+				seconds = Math.floor(maxtime%60);
+				if(seconds < 10) {
+					seconds = "0" + seconds;
+				}
+				msg = minutes +"' "+seconds+"''";
+
+				//$(".mark_timeDiv").show();
+				$("#timer").html( msg);
+				$("#remainTime").val(maxtime);
+				--maxtime;
+			} else{
+				$("#timeOver").val(true);
+				clearInterval(timers);
+				timeOverSubmitTest();
+			}
+		}
+	}
+
+	$(document).ready(function () {
+    	var webSnapshotMonitor = $('#webSnapshotMonitor').val();
+    	var snapshotMonitor = $('#snapshotMonitor').val();
+    	var supportSnapMonitorLog = $('#supportSnapMonitorLog').val();
+    	if ((snapshotMonitor == 1 || supportSnapMonitorLog == 'true') && webSnapshotMonitor != 1) {
+    		var entryExamTime = $('#entryExamTime').val();
+    		var rentryExamTime = $('#rentryExamTime').val();
+    		var data = {};
+    		try{
+        		var faceDetectionResult = $('#faceDetectionResult').val();
+        		if (faceDetectionResult && faceDetectionResult != '') {
+        			data = JSON.parse(faceDetectionResult);
+        		}
+				if($('#electronSnapshotMonitor').val() == 1){
+				    data = loadElectronEnvAndFace() || data;
+				}
+    		}catch(err){}
+    		if (entryExamTime && entryExamTime > 0) {
+    			data.entryTime = entryExamTime;
+    			entryExamLog(data);
+    		} else if (rentryExamTime && rentryExamTime > 0) {
+    			data.rentryTime = rentryExamTime;
+    			rentryExamLog(data);
+    		}
+    	    // openExamClientFaceMonitor('-1', '0', '{"classId":"147927239", "answerId":"169927967"}') ;
+			openExamClientScreenAndCapture('-1', '0', '{"classId":"147927239", "answerId":"169927967"}');
+    	}
+    	var pcclientSwitchout = $('#pcclientSwitchout').val();
+    	if(pcclientSwitchout == 1 && webSnapshotMonitor != 1){
+    	    openExamClientScreenCutting();
+    	}else if(pcclientSwitchout == 0 && webSnapshotMonitor != 1){
+		    closeExamClientScreenCutting();
+		}
+		checkExamClientStartScreencap();
+	});
+	
+	
+	function teacherBrowseModeJump(n){
+		 var url =_HOST_CP2_ + "/exam/test/reVersionTestStartNew-browse?courseId=264220623&paperId=$paperId&classId=147927239&cpi=483315974&ut=t" + "&start=" + n +
+	    "&qbanksystem=0&qbankbackurl=";
+	    window.location.href = url;
+	}
+
+	function getTheNextQuestion(n){
+	    if($('#teacherBrowseMode').val() == 'true'){
+		   	n = 443 + n;
+		    teacherBrowseModeJump(n);
+			return;
+		}
+		var unAnswer = checkQuestionAnswer(n);
+		if (unAnswer) {
+			return;
+		}
+		submitForm(true, false, function(data) {
+			var array=data.split("|");
+			var s=443+n;
+			var lastUpdateTime=array[0];
+			var remainTime=array[1];
+			var enc=array[2];
+			var url =_HOST_CP2_ + "/exam/test/reVersionTestStartNew?keyboardDisplayRequiresUserAction=1&getTheNextQuestion=1&courseId=264220623&classId=147927239"+
+					"&tId=9933055&id=169927967&p=1&start="+s+ "&remainTimeParam="+remainTime+"&relationAnswerLastUpdateTime="+lastUpdateTime+"&enc="+enc
+					+"&monitorStatus=0&monitorOp=-1&examsystem=0&qbanksystem=0&qbankbackurl=&cpi=483315974&openc=6fc5f4723713511d9a2ad15222728831&newMooc=true&webSnapshotMonitor=0";
+			if($("#isChaoxingExamPc").val() == 'true'){
+				url +=  '&sc=' + $('#screenAndCaptureCall').val();
+			}
+			window.location.href = url;
+		});
+	}
+
+	function getTheQuestionByStart(n, targetGroupId){
+	    if($('#teacherBrowseMode').val() == 'true'){
+		    teacherBrowseModeJump(n);
+			return;
+		}
+		var noPass = groupPaperLimitTimeNextCheck(n, targetGroupId);
+		if (noPass) {
+			return;
+		}
+		submitForm(true, false, function(data) {
+			var array=data.split("|");
+			var lastUpdateTime=array[0];
+			var remainTime=array[1];
+			var enc=array[2];
+			var url = _HOST_CP2_ + "/exam/test/reVersionTestStartNew?keyboardDisplayRequiresUserAction=1&courseId=264220623&classId=147927239&tId=9933055&id=169927967&p=1&start="+n+
+					"&monitorStatus=0&monitorOp=-1&examsystem=0&qbanksystem=0&qbankbackurl=&remainTimeParam="+remainTime+"&relationAnswerLastUpdateTime="+lastUpdateTime+"&enc="+enc+"&cpi=483315974&openc=6fc5f4723713511d9a2ad15222728831&newMooc=true&webSnapshotMonitor=0";
+			if($("#isChaoxingExamPc").val() == 'true'){
+				url +=  '&sc=' + $('#screenAndCaptureCall').val();
+			}
+			window.location.href = url;
+		});
+	}
+
+	$(function(){
+	
+	    checkStartSingleQuesLimitTimeTimer();
+		checkStartGroupPaperLimitTimeTimer();
+		checkBrowerBack();
+		
+	    $(".optionsCon").niceScroll({
+			cursorborder : "",
+			cursorwidth : "8px",
+			cursorcolor : "#E6ECF5",
+			boxzoom : false
+		});
+		$('textarea').autoHeight({len:53});
+		answerCardLocateCurrent();
+
+		 $(document).ready(function() {
+			$(".programAswer").niceScroll({cursorborder:"",cursorwidth:"8px", cursorcolor:"#E6ECF5",boxzoom:false});
+			$(".optionsCon").niceScroll({cursorborder:"", cursorwidth:"8px", cursorcolor:"#E6ECF5",boxzoom:false});
+		  });
+		if("0" == "1"){
+			// 禁止读取非第一题考试左侧边栏内容
+			if("443" && "443" > 0){
+				if ($("#tabMarkingLeft") && $("#tabMarkingLeft").find("*")){
+					$("#tabMarkingLeft").find("*").attr({tabindex:"-1", "aria-hidden":true});
+				}
+			}
+			var firstFocus = $(".subNav");
+			if (firstFocus) {
+				setTimeout(function() {
+					try {
+						if (window.top && window.top.accessiblePlugs) {
+							window.top.accessiblePlugs.update();
+						}
+					} catch (e) {
+						console.log(e)
+					}
+					firstFocus.eq(0).focus();
+				}, 300)
+			}
+		}
+	});
+		
+	$(document).bind("visibilitychange",function(e){
+         checkRemainTime(document.visibilityState);
+    });
+</script>
+<script src="//mooc1.chaoxing.com/exam-ans/space/work/js/preview-attach.js?v=2023-1102-1900"></script><link href="//mooc1.chaoxing.com/exam-ans/css/work/viewer.min.css?v=2021-0830-1700" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/js/jquery.md5.js"></script>
+<script type="text/javascript" src="//mooc1.chaoxing.com/exam-ans/space/work/js/viewer-jquery.min.js?v=2025-1128-1511"></script>
+<script type="text/javascript">
+try{
+	$(function(){
+		var imgList = $(".TiMu").find("div img:not(.workAttach img, .attach img, .attachNew img, .stuAnswerArea img, .popClose img, .ans-formula-moudle, .no_view)");
+		for (var i = 0, len = imgList.size(); i < len; i++) {
+			 var src = imgList.eq(i).attr("src");
+			 if(src){
+    			var index = src.indexOf("375_1024");
+    			if (index != -1) {
+    				src = src.replace("375_1024", "origin");
+    			}
+                 var index2 = src.indexOf("750_1024");
+                 if (index2 != -1) {
+                     src = src.replace("750_1024", "origin");
+                 }
+    			imgList.eq(i).attr("data-original", src);
+		   }
+		}
+        $(".TiMu").find("div img:not(.workAttach img, .attach img, .attachNew img, .stuAnswerArea img, .popClose img, .no_view)").viewer({
+			url : 'data-original',
+		});
+	})
+  }catch(error){}
+</script><script src="//mooc1.chaoxing.com/exam-ans/mooc2/js/exam/watermark.min.js?v=2023-0131-0946"></script>
+<!-- 代码高亮开始 start -->
+<link type="text/css" href="//mooc1.chaoxing.com/exam-ans/views/mooc2/ueditor/insertcode/css/default.min.css" rel="stylesheet" />
+<script type="text/javascript" src="//mooc-res2.chaoxing.com/exam-ans/js/highlight.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="//mooc-res2.chaoxing.com/exam-ans/js/highlightjs-line-numbers.js" charset="utf-8"></script>
+<style>
+    pre,code {display: block;background: #F7F8FA;border: 1px solid #E1E3E5; font-size: 14px; border-radius: 4px; padding: 30px 20px; margin: 20px 0; font-family: CXHackSafariFont,CXEmojiFont,CXChineseQuote,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Tahoma, Arial,Segoe UI,PingFang SC, Hiragino Sans GB,Microsoft YaHei,sans-serif,Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,Noto Color Emoji; }
+    pre{overflow-x: auto;margin:.5em 0;padding:.4em .6em;border-radius:8px;background:#f8f8f8;}
+    pre.autolinebreak{white-space: normal; }
+    code.hljs{background: #F7F8FA;}
+    pre code,pre pre{ margin: 0; background: none;border: none;}/*padding: 0;*/
+    .code-tool-wrap{padding-bottom: 1em;left: 20px; top: 2px; width: calc(100% - 40px); height: 24px; font-size: 14px; user-select: none;}
+    .code-lang{ display:inline-block; color: #ACB4BF; }
+    .ans-cc .ans-noborder th,.ans-cc .ans-noborder td{border-color:transparent;}
+    .ans-cc pre,.ans-cc code{ position: relative; padding: 0px 20px 30px; margin: 20px 0;border: 1px solid #E1E3E5; border-radius: 4px; color: #474C59; background: #F7F8FA; font-size:14px; font-family: CXHackSafariFont,CXEmojiFont,CXChineseQuote,-apple-system,BlinkMacSystemFont,Helvetica Neue,Helvetica,Tahoma, Arial,Segoe UI,PingFang SC, Hiragino Sans GB,Microsoft YaHei,sans-serif,Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol,Noto Color Emoji;  }
+    .ans-cc pre{overflow: auto}
+    .ans-cc pre code,.ans-cc pre pre{ padding: 0; border:none; margin: 0; background: none;border-radius: 0;}
+    .ans-cc pre.autolinebreak{white-space: pre-wrap;word-wrap: break-word;}
+    .hljs-ln-numbers {text-align: center;color: #ccc;border-right: 1px solid #CCC;vertical-align: top;padding-right: 5px !important;}
+    .hljs-ln-code {padding-left: 5px !important;}
+    /* 全局去掉表格样式 */
+    .ans-cc pre code table tr td {border: solid 0px #cfd4dc;text-align: left}
+    /* 作业表格适配，考试表格适配 */
+    .ans-cc pre table{table-layout: unset;}
+    .ans-cc pre code table{table-layout: unset;}
+    /* pre 标签未换行 */
+    .ans-cc pre.line-numbers{clear:both}
+    .ans-cc pre{clear:both}
+
+    /* app作业库 考试库 查看样式 */
+
+    .hljs-link, .hljs-operator, .hljs-regexp, .hljs-selector-attr, .hljs-selector-pseudo, .hljs-symbol, .hljs-template-variable, .hljs-variable {
+        color: #ab5656 !important;
+    }
+    .hljs-deletion, .hljs-number, .hljs-quote, .hljs-selector-class, .hljs-selector-id, .hljs-string, .hljs-template-tag, .hljs-type {
+        color: #800 !important;
+    }
+    /* 章节作业 */
+    .hljs-ln span{margin-right:0}
+
+    /* 学习通颜色覆盖 */
+    .hljs-type{color:#800 !important;}
+    .hljs-section,.hljs-title{color:#800 !important;font-weight:700}
+    /* 背景颜色 */
+    .ans-cc pre code td{background-color: unset;}
+</style>
+<link type="text/css" href="//mooc1.chaoxing.com/exam-ans/css/newEditor.css?v=2023-0609-1900" rel="stylesheet" />
+<script>
+    /**
+     * 保证最后加载
+     */
+    $(function () {
+        var pre = $(".ans-cc").find('pre')
+        if(pre){
+            pre.each(function () {
+                // debugger
+                var me = this;
+                if ($(me).hasClass('CodeMirror-line')) { //代码编辑器
+                    return;
+                }
+                var lang = me.firstChild && me.firstChild.lang;
+                if (typeof (lang) == 'undefined' || lang == null || lang == "" ) {
+                    lang = me.firstChild && me.firstChild.className;
+                    if (typeof (lang) != 'undefined' && lang != null && lang != "" ) {
+                        var split = lang.split("-");
+                        lang = split[1];
+                        if (lang == 'plain') {
+                            lang = 'Plain Text';
+                        }
+                    } else {
+                        lang = 'Plain Text';
+                    }
+                }
+                me.innerHTML = '<div class="code-tool-wrap clearfix"><div class="code-lang fl">' + lang
+                        + '</div><div class="copy1 fr"><i></i><span></span></div></div>' + me.innerHTML;
+                me.innerHTML = me.innerHTML.replace(/<br\s*\/?>/g, "\n");
+            })
+        }
+
+        try {
+            hljs.initHighlightingOnLoad();
+            hljs.initLineNumbersOnLoad({ singleLine:true });
+        } catch (e) {
+
+        }
+    })
+</script>
+<!-- 代码高亮结束 end -->
+ 
+</body>
+</html>

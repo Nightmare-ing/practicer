@@ -3,6 +3,7 @@
 This workspace contains a small question bank pipeline:
 
 - `web_extract.py` extracts structured questions from `problems src/practice.html`
+- `extract_test_questions.py` extracts all questions from `problems src/test.html`
 - `practice_manager.py` manages the generated `practice_questions.json`
 
 ## Files
@@ -10,6 +11,7 @@ This workspace contains a small question bank pipeline:
 - `practice_questions.json`: structured question data
 - `practice_manager.py`: interactive terminal tool for recording answers and self-testing
 - `web_extract.py`: HTML extractor that builds the JSON file from the exported practice page
+- `extract_test_questions.py`: HTML extractor for the paginated test-style page
 
 ## Requirements
 
@@ -37,6 +39,28 @@ python3 web_extract.py "problems src/simulated self-test 1.html" -o practice_que
 ```
 
 The same command works with other exports, such as `problems src/practice.html`.
+
+## Extract `test.html`
+
+If you have the single-question paginated export in `problems src/test.html`, use the dedicated extractor:
+
+```bash
+python3 extract_test_questions.py
+```
+
+By default, it reads `problems src/test.html` and writes `all_questions_raw.json`.
+
+If the page needs an authenticated session, pass the cookie header explicitly:
+
+```bash
+python3 extract_test_questions.py --cookie "SESSION=..." -o all_questions_raw.json
+```
+
+You can also point it at another exported HTML file explicitly:
+
+```bash
+python3 extract_test_questions.py --html "problems src/test.html" --cookie "SESSION=..." -o all_questions_raw.json
+```
 
 ## Practice Manager
 
